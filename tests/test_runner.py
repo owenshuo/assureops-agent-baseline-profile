@@ -59,9 +59,7 @@ def test_action_attribution_requires_an_observed_approved_action_and_result() ->
 def test_broken_approval_gate_demotes_control_to_gap() -> None:
     profile = load_profile(ROOT / "profile" / "assureops.yaml")
     report, digest = source_report()
-    gate = next(
-        item for item in report["gates"] if item["name"] == "approval_plan_digest_target"
-    )
+    gate = next(item for item in report["gates"] if item["name"] == "approval_plan_digest_target")
     gate["passed"] = False
     identity = {key: value for key, value in report.items() if key != "report_digest"}
     report["report_digest"] = content_digest(identity)

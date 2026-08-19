@@ -961,7 +961,7 @@
     "scope": "Synthetic evidence-gated quality operations in AssureOps",
     "version": "0.1.0"
   },
-  "profile_report_digest": "29aae5e77c0d55893c7ede92b250bfe2aaeeba694f196f39dc9461c2e1ca62ff",
+  "profile_report_digest": "e8e3a5fd7edfd9a7623e9bd8e179919507fb0939d4d70cf721a57919989f95f6",
   "source_evaluation": {
     "file_sha256": "0b3991ab8db4e561e291f45d38a780637ae9d71c8c5be11cf34703564b773d83",
     "passed": true,
@@ -990,10 +990,10 @@
     "partial": 9
   },
   "system_under_test": {
-    "commit": "09933932d93bf9f1a8ae5706bffbbc21fe29d89e",
+    "commit": "6e325690b0c41089635c4c521bc89dea6eb6bd23",
     "evaluation_protocol": "assureops-evaluation-v2",
     "name": "AssureOps Agent",
     "repository": "https://github.com/owenshuo/assureops-agent",
-    "tag": "agent-baseline-aut05-v2"
+    "tag": "agent-baseline-aut05-v3"
   }
 }

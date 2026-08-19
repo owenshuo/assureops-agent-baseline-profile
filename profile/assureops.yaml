@@ -16,8 +16,8 @@ baseline:
 system_under_test:
   name: "AssureOps Agent"
   repository: "https://github.com/owenshuo/assureops-agent"
-  commit: "09933932d93bf9f1a8ae5706bffbbc21fe29d89e"
-  tag: "agent-baseline-aut05-v2"
+  commit: "6e325690b0c41089635c4c521bc89dea6eb6bd23"
+  tag: "agent-baseline-aut05-v3"
   evaluation_protocol: "assureops-evaluation-v2"
 
 controls:

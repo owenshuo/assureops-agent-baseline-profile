@@ -6,10 +6,10 @@
 ## Pinned inputs
 
 - Agent Baseline: `1.0-draft` at `8954684dd3221ae0613a55dabfc1b6bc10d23705`
-- AssureOps: `09933932d93bf9f1a8ae5706bffbbc21fe29d89e` / tag `agent-baseline-aut05-v2`
+- AssureOps: `6e325690b0c41089635c4c521bc89dea6eb6bd23` / tag `agent-baseline-aut05-v3`
 - Evaluation protocol: `assureops-evaluation-v2`
 - Source report digest: `f3846064da73d9c1769ed4b6447d089bbef45cacdc11d92a6a2cdae9e62f23ee`
-- Profile report digest: `29aae5e77c0d55893c7ede92b250bfe2aaeeba694f196f39dc9461c2e1ca62ff`
+- Profile report digest: `e8e3a5fd7edfd9a7623e9bd8e179919507fb0939d4d70cf721a57919989f95f6`
 
 ## Summary
 

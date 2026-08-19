@@ -47,12 +47,10 @@ def verify_baseline_source(repo: Path, profile: dict[str, Any]) -> dict[str, Any
     official_controls = source.get("controls", [])
     mapped = profile["controls"]
     official_identity = [
-        (item["id"], item["outcome"], item["type"], item["title"])
-        for item in official_controls
+        (item["id"], item["outcome"], item["type"], item["title"]) for item in official_controls
     ]
     mapped_identity = [
-        (item["id"], item["outcome"], item["type"], item["title"])
-        for item in mapped
+        (item["id"], item["outcome"], item["type"], item["title"]) for item in mapped
     ]
     if official_identity != mapped_identity:
         raise BaselineSourceError("profile control identities differ from pinned controls.yaml")

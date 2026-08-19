@@ -21,8 +21,8 @@ data, or treat a passing scoped test as full Agent Baseline conformance.
 - Agent Baseline controls SHA-256:
   `23864515ef28e54522977ed630265a98b638216d3618ecb6c319a21ed9242666`
 - AssureOps repository commit:
-  `09933932d93bf9f1a8ae5706bffbbc21fe29d89e`
-- AssureOps immutable tag: `agent-baseline-aut05-v2`
+  `6e325690b0c41089635c4c521bc89dea6eb6bd23`
+- AssureOps immutable tag: `agent-baseline-aut05-v3`
 
 These values live in `profile/assureops.yaml` and are enforced by the runner.
 
