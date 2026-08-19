@@ -24,5 +24,7 @@ def test_markdown_is_deterministic_and_disclaims_certification() -> None:
     second = render_markdown(report)
     assert first == second
     assert "not certification" in first
-    assert "| AUT-05 | AUT | evidenced |" in first
+    assert "No control currently reaches `evidenced`" in first
+    assert "| AUT-05 | AUT | partial |" in first
+    assert "| VAL-04 | VAL | not_assessed |" in first
     assert "| RES-01 | RES | not_assessed |" in first

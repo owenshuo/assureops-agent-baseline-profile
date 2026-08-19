@@ -7,6 +7,7 @@ from pathlib import Path
 import pytest
 
 from agent_baseline_profile.canonical import content_digest, file_digest
+from agent_baseline_profile.methods import minimum_action_attribution
 from agent_baseline_profile.profile import load_profile
 from agent_baseline_profile.runner import EvaluationArtifactError, evaluate_report
 
@@ -19,17 +20,17 @@ def source_report() -> tuple[dict[str, object], str]:
     return json.loads(content), file_digest(content)
 
 
-def test_pinned_fixture_produces_five_evidenced_and_seven_partial_controls() -> None:
+def test_pinned_fixture_produces_ten_partial_controls_without_overclaiming() -> None:
     profile = load_profile(ROOT / "profile" / "assureops.yaml")
     report, digest = source_report()
     result = evaluate_report(profile, report, source_file_sha256=digest)
     assert result["summary"] == {
         "control_count": 35,
-        "executable_method_count": 12,
-        "evidenced": 5,
-        "partial": 7,
+        "executable_method_count": 10,
+        "evidenced": 0,
+        "partial": 10,
         "gap": 0,
-        "not_assessed": 23,
+        "not_assessed": 25,
     }
     assert len(result["profile_report_digest"]) == 64
 
@@ -40,6 +41,16 @@ def test_profile_report_is_deterministic() -> None:
     first = evaluate_report(profile, report, source_file_sha256=digest)
     second = evaluate_report(profile, report, source_file_sha256=digest)
     assert first == second
+
+
+def test_action_attribution_requires_an_observed_approved_action_and_result() -> None:
+    report, _ = source_report()
+    for run in report["runs"]:
+        if run["scenario_id"] == "AO-EVAL-16":
+            run["observation"]["action_executed"] = False
+            run["observation"]["side_effects"] = []
+
+    assert not all(check["passed"] for check in minimum_action_attribution(report))
 
 
 def test_broken_approval_gate_demotes_control_to_gap() -> None:
@@ -53,7 +64,7 @@ def test_broken_approval_gate_demotes_control_to_gap() -> None:
     report["report_digest"] = content_digest(identity)
     result = evaluate_report(profile, report, source_file_sha256=digest)
     control = next(item for item in result["controls"] if item["id"] == "AUT-02")
-    assert control["declared_state"] == "evidenced"
+    assert control["declared_state"] == "partial"
     assert control["effective_state"] == "gap"
 
 

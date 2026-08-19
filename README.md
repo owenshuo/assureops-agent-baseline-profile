@@ -8,7 +8,7 @@ The project does four things:
 
 1. catalogues all 35 Agent Baseline controls without claiming certification;
 2. records an explicit `evidenced`, `partial`, `gap`, or `not_assessed` state;
-3. runs 12 scoped test methods against AssureOps' public evaluation artifact;
+3. runs 10 scoped test methods against AssureOps' public evaluation artifact;
 4. emits a deterministic, digest-bound evidence report suitable for review.
 
 It does **not** modify AssureOps, copy private product code, publish internal
@@ -78,7 +78,7 @@ Re-running the profile must reproduce the same `profile_report_digest`.
 
 | State | Meaning |
 | --- | --- |
-| `evidenced` | The scoped claim has executable evidence for this pinned system version. |
+| `evidenced` | Every requirement of the control is supported by executable evidence for the stated scope. |
 | `partial` | Some required behavior is evidenced, but the complete control is not. |
 | `gap` | The profile looked for required evidence and did not find it. |
 | `not_assessed` | This profile does not yet test the control; absence is not inferred. |
@@ -97,7 +97,8 @@ assureops_agent:   executed at an immutable commit, not modified
 
 ## Upstream contribution
 
-`docs/upstream-feedback-draft.md` contains a review-first proposal for a test
-method that binds approval to the exact plan digest, target revision, validity
-period, and resulting evidence. It is a draft only; nothing is submitted to the
-Agent Baseline project without a separate review and authorization.
+`docs/upstream-feedback-aut-05-draft.md` contains a review-first, vendor-neutral
+proposal for exact approval binding. `docs/upstream-feedback-val-04-draft.md`
+records a separate post-action validation method that is not yet ready to
+submit because the current profile does not implement it. Nothing is submitted
+to Agent Baseline without separate review and authorization.

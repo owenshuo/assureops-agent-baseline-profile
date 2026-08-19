@@ -33,7 +33,12 @@ def render_markdown(report: dict[str, Any]) -> str:
             f"{summary['not_assessed']} |"
         ),
         "",
-        "`Evidenced` applies only to the synthetic AssureOps scope and pinned version.",
+        (
+            "No control currently reaches `evidenced`; executable results prove only "
+            "the stated partial behavior."
+            if summary["evidenced"] == 0
+            else "`Evidenced` applies only to the synthetic AssureOps scope and pinned version."
+        ),
         "",
         "## Control assessment",
         "",

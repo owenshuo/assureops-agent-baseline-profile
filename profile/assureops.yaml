@@ -46,30 +46,30 @@ controls:
     title: "Distinct identity and action attribution"
     state: partial
     method: assureops.minimum_action_attribution
-    rationale: "Plan, target, action, result, and trace are present; initiating principal and deployment identity are absent."
+    rationale: "The approved action is tied to a plan digest, target revision, result, and stable record identifiers; agent identity, authenticated initiating principal, deployment, task, and time attribution are not proven."
   - id: AUT-02
     outcome: AUT
     type: Decision
     title: "Purpose and task-bound authority"
-    state: evidenced
+    state: partial
     method: assureops.authority_binding
-    rationale: "Wrong plan, digest, revision, target, expiry, and action are deterministically denied."
+    rationale: "Wrong plan, digest, revision, target, expiry, and action are deterministically denied; purpose, data scope, limits, jurisdiction, and authenticated principal authority are not exercised."
   - {id: AUT-03, outcome: AUT, type: Enforcement, title: "Delegation attenuation", state: not_assessed, rationale: "The evaluated slice has no downstream-agent delegation chain."}
   - {id: AUT-04, outcome: AUT, type: Enforcement, title: "Just-in-time credentialing", state: not_assessed, rationale: "Credential issuance and model-context exclusion require runtime identity evidence."}
   - id: AUT-05
     outcome: AUT
     type: Decision
     title: "Independent approval"
-    state: evidenced
+    state: partial
     method: assureops.independent_approval
-    rationale: "Only the exact approved plan can execute; missing or rejected review is denied."
+    rationale: "Only the exact approved plan can execute and missing or rejected review is denied; authenticated reviewer identity and independence from the requesting agent are not proven."
   - id: AUT-06
     outcome: AUT
     type: Enforcement
     title: "Fail-closed authorization and circuit breaking"
-    state: evidenced
+    state: partial
     method: assureops.fail_closed
-    rationale: "Unverifiable evidence, approval, target, or action never produces false-ready or unauthorized effects."
+    rationale: "Tested evidence, approval, target, and action failures deny side effects; runtime circuit breaking, active halt, and identity or policy revocation are not exercised."
   - {id: AUT-07, outcome: AUT, type: Decision, title: "Step-up verification", state: not_assessed, rationale: "Re-authentication and stronger-factor behavior are not part of the synthetic slice."}
   - {id: AUT-08, outcome: AUT, type: Decision, title: "Just-in-time authority elevation", state: not_assessed, rationale: "Temporary authority elevation is intentionally absent from the evaluated slice."}
   - {id: AUT-09, outcome: AUT, type: Enforcement, title: "Proof-of-possession credential binding", state: not_assessed, rationale: "Sender-constrained credentials require identity-provider integration evidence."}
@@ -81,13 +81,7 @@ controls:
     state: partial
     method: assureops.telemetry_minimum
     rationale: "Scenario, policy result, target, action, and trace data exist, but the full identity/model/tool composition is absent."
-  - id: OBS-02
-    outcome: OBS
-    type: Evidence
-    title: "End-to-end correlation"
-    state: partial
-    method: assureops.trace_correlation
-    rationale: "Stable per-scenario traces and digests exist; cross-system MCP/tool/target correlation is not proven."
+  - {id: OBS-02, outcome: OBS, type: Evidence, title: "End-to-end correlation", state: not_assessed, rationale: "Stable record identifiers exist, but the report does not link events across agent, model, policy, tool, enforcement, and target systems."}
   - {id: OBS-03, outcome: OBS, type: Detection, title: "Behaviour and drift monitoring", state: not_assessed, rationale: "No runtime behavioral baseline or drift detector is evaluated."}
   - {id: OBS-04, outcome: OBS, type: Detection, title: "Unintended action detection", state: not_assessed, rationale: "The suite blocks unauthorized effects but does not monitor technically permitted harmful actions."}
   - id: OBS-05
@@ -109,18 +103,12 @@ controls:
     outcome: VAL
     type: Assurance
     title: "Agent-specific security testing"
-    state: evidenced
+    state: partial
     method: assureops.agent_security_testing
-    rationale: "Twenty-seven adversarial scenarios run twice with hard failure thresholds and deterministic replay."
+    rationale: "Twenty-seven adversarial scenarios exercise the reference domain kernel twice with hard thresholds; the deployed agent, model, tools, data access, and material-change retest trigger are not exercised."
   - {id: VAL-02, outcome: VAL, type: Assurance, title: "First-party agentic components testing", state: not_assessed, rationale: "Component-level release evidence is not represented in the portable report."}
   - {id: VAL-03, outcome: VAL, type: Assurance, title: "Agent-generated artifact testing", state: not_assessed, rationale: "Equivalent security, quality, and license checks for generated artifacts are not tested here."}
-  - id: VAL-04
-    outcome: VAL
-    type: Assurance
-    title: "Agent outcome validation"
-    state: evidenced
-    method: assureops.outcome_validation
-    rationale: "Positive, negative, missing, stale, and unknown outcomes are independently classified before readiness."
+  - {id: VAL-04, outcome: VAL, type: Assurance, title: "Agent outcome validation", state: not_assessed, rationale: "The report validates evidence-state decisions but does not test post-action business outcomes or pre-finalization validation for high-impact actions."}
 
   - {id: RES-01, outcome: RES, type: Response, title: "Immediate stop and authority revocation", state: not_assessed, rationale: "Stop and credential revocation response time are not exercised."}
   - {id: RES-02, outcome: RES, type: Response, title: "Version and component quarantine", state: not_assessed, rationale: "Version, model, tool, skill, and MCP quarantine are not exercised."}

@@ -24,8 +24,8 @@ def test_profile_has_all_35_unique_controls_and_six_outcomes() -> None:
     }
 
 
-def test_every_claimed_method_exists_and_exactly_12_are_executable() -> None:
+def test_every_claimed_method_exists_and_exactly_10_are_executable() -> None:
     profile = load_profile(ROOT / "profile" / "assureops.yaml")
     methods = [control["method"] for control in profile["controls"] if "method" in control]
-    assert len(methods) == 12
+    assert len(methods) == 10
     assert set(methods) <= set(METHODS)
