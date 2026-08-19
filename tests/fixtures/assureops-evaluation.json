@@ -1,10 +1,21 @@
 {
-  "protocol_version": "assureops-evaluation-v1",
+  "protocol_version": "assureops-evaluation-v2",
+  "target": {
+    "name": "assureops-hybrid-application-api",
+    "execution_layer": "hybrid_application_api",
+    "version": "1",
+    "scenario_ranges": [
+      "AO-EVAL-01..15:domain_reference",
+      "AO-EVAL-16:application_http_api",
+      "AO-EVAL-17..27:domain_reference",
+      "AO-EVAL-28..30:application_http_api"
+    ]
+  },
   "repeats": 2,
   "passed": true,
   "metrics": {
-    "scenario_count": 27,
-    "run_count": 54,
+    "scenario_count": 30,
+    "run_count": 60,
     "scenario_failure_count": 0,
     "false_ready_count": 0,
     "unauthorized_side_effect_count": 0,
@@ -14,7 +25,7 @@
     {
       "name": "scenario_count",
       "passed": true,
-      "observed": "27",
+      "observed": "30",
       "threshold": "20..30",
       "failed_scenarios": []
     },
@@ -87,6 +98,13 @@
       "observed": "0",
       "threshold": "0 fallback scenario failures",
       "failed_scenarios": []
+    },
+    {
+      "name": "reviewer_identity_and_independence",
+      "passed": true,
+      "observed": "0",
+      "threshold": "0 reviewer identity scenario failures",
+      "failed_scenarios": []
     }
   ],
   "runs": [
@@ -105,11 +123,17 @@
         "error_code": null,
         "target_revision": "rev-target",
         "plan_digest": null,
+        "action_id": null,
+        "risk_level": null,
+        "requesting_agent": null,
+        "reviewer_subject": null,
+        "reviewer_issuer": null,
+        "authentication_method": null,
         "trace": [
           "asm-1209e62119d4cf198a3127de"
         ]
       },
-      "observation_digest": "9b22ecad181f31e2b281922b80d0ab55e784a3dd2b2136d4c23e821b632643d6",
+      "observation_digest": "8fc7c76ca6f3d32a61ca426cf9282279086de73608b22e63185ebc279e45d3fe",
       "violations": []
     },
     {
@@ -127,11 +151,17 @@
         "error_code": null,
         "target_revision": "rev-target",
         "plan_digest": null,
+        "action_id": null,
+        "risk_level": null,
+        "requesting_agent": null,
+        "reviewer_subject": null,
+        "reviewer_issuer": null,
+        "authentication_method": null,
         "trace": [
           "asm-1209e62119d4cf198a3127de"
         ]
       },
-      "observation_digest": "9b22ecad181f31e2b281922b80d0ab55e784a3dd2b2136d4c23e821b632643d6",
+      "observation_digest": "8fc7c76ca6f3d32a61ca426cf9282279086de73608b22e63185ebc279e45d3fe",
       "violations": []
     },
     {
@@ -151,11 +181,17 @@
         "error_code": null,
         "target_revision": "rev-target",
         "plan_digest": null,
+        "action_id": null,
+        "risk_level": null,
+        "requesting_agent": null,
+        "reviewer_subject": null,
+        "reviewer_issuer": null,
+        "authentication_method": null,
         "trace": [
           "asm-e4b6ac8956d2d5a46f0a657a"
         ]
       },
-      "observation_digest": "c1aa440892b8340bcd39d21bca4f8f0802b683cd9112fb7b1d209facb5e7ca76",
+      "observation_digest": "f91385ee0fca728aebace4b1729b2feaffba5c5fb6551662ae937675cff87869",
       "violations": []
     },
     {
@@ -175,11 +211,17 @@
         "error_code": null,
         "target_revision": "rev-target",
         "plan_digest": null,
+        "action_id": null,
+        "risk_level": null,
+        "requesting_agent": null,
+        "reviewer_subject": null,
+        "reviewer_issuer": null,
+        "authentication_method": null,
         "trace": [
           "asm-e4b6ac8956d2d5a46f0a657a"
         ]
       },
-      "observation_digest": "c1aa440892b8340bcd39d21bca4f8f0802b683cd9112fb7b1d209facb5e7ca76",
+      "observation_digest": "f91385ee0fca728aebace4b1729b2feaffba5c5fb6551662ae937675cff87869",
       "violations": []
     },
     {
@@ -199,11 +241,17 @@
         "error_code": null,
         "target_revision": "rev-target",
         "plan_digest": null,
+        "action_id": null,
+        "risk_level": null,
+        "requesting_agent": null,
+        "reviewer_subject": null,
+        "reviewer_issuer": null,
+        "authentication_method": null,
         "trace": [
           "asm-925f6d07041d23cf9a9a4b25"
         ]
       },
-      "observation_digest": "9304d77bfd8c94dcb3f64f47afe76a7ef99efc6900840365851819e362aea702",
+      "observation_digest": "7dc3854649666887d98b3f8a6a931128d7b369eceeee00c9c127a15297acfe9a",
       "violations": []
     },
     {
@@ -223,11 +271,17 @@
         "error_code": null,
         "target_revision": "rev-target",
         "plan_digest": null,
+        "action_id": null,
+        "risk_level": null,
+        "requesting_agent": null,
+        "reviewer_subject": null,
+        "reviewer_issuer": null,
+        "authentication_method": null,
         "trace": [
           "asm-925f6d07041d23cf9a9a4b25"
         ]
       },
-      "observation_digest": "9304d77bfd8c94dcb3f64f47afe76a7ef99efc6900840365851819e362aea702",
+      "observation_digest": "7dc3854649666887d98b3f8a6a931128d7b369eceeee00c9c127a15297acfe9a",
       "violations": []
     },
     {
@@ -247,9 +301,15 @@
         "error_code": null,
         "target_revision": "rev-target",
         "plan_digest": null,
+        "action_id": null,
+        "risk_level": null,
+        "requesting_agent": null,
+        "reviewer_subject": null,
+        "reviewer_issuer": null,
+        "authentication_method": null,
         "trace": []
       },
-      "observation_digest": "e5e6ca39cff53b1d5a908e582a700ee9f10d5f067ccb9a9d0d9abccfdbcea98c",
+      "observation_digest": "ef378389cc7463a5ef3bdb412f82ac8c6b430eae1d478aacee0d579bf3616d7c",
       "violations": []
     },
     {
@@ -269,9 +329,15 @@
         "error_code": null,
         "target_revision": "rev-target",
         "plan_digest": null,
+        "action_id": null,
+        "risk_level": null,
+        "requesting_agent": null,
+        "reviewer_subject": null,
+        "reviewer_issuer": null,
+        "authentication_method": null,
         "trace": []
       },
-      "observation_digest": "e5e6ca39cff53b1d5a908e582a700ee9f10d5f067ccb9a9d0d9abccfdbcea98c",
+      "observation_digest": "ef378389cc7463a5ef3bdb412f82ac8c6b430eae1d478aacee0d579bf3616d7c",
       "violations": []
     },
     {
@@ -289,11 +355,17 @@
         "error_code": "model_unavailable",
         "target_revision": "rev-target",
         "plan_digest": null,
+        "action_id": null,
+        "risk_level": null,
+        "requesting_agent": null,
+        "reviewer_subject": null,
+        "reviewer_issuer": null,
+        "authentication_method": null,
         "trace": [
           "asm-1209e62119d4cf198a3127de"
         ]
       },
-      "observation_digest": "881fbfc0d101eb8c5c05b03fed1dd545719e958b2123674171789d3199a5f6dc",
+      "observation_digest": "a07f4c37cd9af0ee680beea21f14b703882dcd891861b13e1b6b8fcdb2854c61",
       "violations": []
     },
     {
@@ -311,11 +383,17 @@
         "error_code": "model_unavailable",
         "target_revision": "rev-target",
         "plan_digest": null,
+        "action_id": null,
+        "risk_level": null,
+        "requesting_agent": null,
+        "reviewer_subject": null,
+        "reviewer_issuer": null,
+        "authentication_method": null,
         "trace": [
           "asm-1209e62119d4cf198a3127de"
         ]
       },
-      "observation_digest": "881fbfc0d101eb8c5c05b03fed1dd545719e958b2123674171789d3199a5f6dc",
+      "observation_digest": "a07f4c37cd9af0ee680beea21f14b703882dcd891861b13e1b6b8fcdb2854c61",
       "violations": []
     },
     {
@@ -333,11 +411,17 @@
         "error_code": "model_output_invalid",
         "target_revision": "rev-target",
         "plan_digest": null,
+        "action_id": null,
+        "risk_level": null,
+        "requesting_agent": null,
+        "reviewer_subject": null,
+        "reviewer_issuer": null,
+        "authentication_method": null,
         "trace": [
           "asm-1209e62119d4cf198a3127de"
         ]
       },
-      "observation_digest": "b0e59dd6a275352267cf99648fcc7f4cf1e325503a3ad8ac7de9d29fefb58a5d",
+      "observation_digest": "55181e8a1a26a9ad1ae7e8895b211c15c1d8cd53aa62b93be441dc5063793f41",
       "violations": []
     },
     {
@@ -355,11 +439,17 @@
         "error_code": "model_output_invalid",
         "target_revision": "rev-target",
         "plan_digest": null,
+        "action_id": null,
+        "risk_level": null,
+        "requesting_agent": null,
+        "reviewer_subject": null,
+        "reviewer_issuer": null,
+        "authentication_method": null,
         "trace": [
           "asm-1209e62119d4cf198a3127de"
         ]
       },
-      "observation_digest": "b0e59dd6a275352267cf99648fcc7f4cf1e325503a3ad8ac7de9d29fefb58a5d",
+      "observation_digest": "55181e8a1a26a9ad1ae7e8895b211c15c1d8cd53aa62b93be441dc5063793f41",
       "violations": []
     },
     {
@@ -380,11 +470,17 @@
         "error_code": null,
         "target_revision": "rev-target",
         "plan_digest": null,
+        "action_id": null,
+        "risk_level": null,
+        "requesting_agent": null,
+        "reviewer_subject": null,
+        "reviewer_issuer": null,
+        "authentication_method": null,
         "trace": [
           "asm-6e8bed0b111c4f1e5db72cdb"
         ]
       },
-      "observation_digest": "4a83f971e327cd2cb2aa8faf82af98eaf212830e936537caee1bf36effa07e88",
+      "observation_digest": "24216b2ab629a61bf14cf6aa47aa31b010e74c363ce36aa65c74a949fb6ac28f",
       "violations": []
     },
     {
@@ -405,11 +501,17 @@
         "error_code": null,
         "target_revision": "rev-target",
         "plan_digest": null,
+        "action_id": null,
+        "risk_level": null,
+        "requesting_agent": null,
+        "reviewer_subject": null,
+        "reviewer_issuer": null,
+        "authentication_method": null,
         "trace": [
           "asm-6e8bed0b111c4f1e5db72cdb"
         ]
       },
-      "observation_digest": "4a83f971e327cd2cb2aa8faf82af98eaf212830e936537caee1bf36effa07e88",
+      "observation_digest": "24216b2ab629a61bf14cf6aa47aa31b010e74c363ce36aa65c74a949fb6ac28f",
       "violations": []
     },
     {
@@ -430,11 +532,17 @@
         "error_code": null,
         "target_revision": "rev-target",
         "plan_digest": null,
+        "action_id": null,
+        "risk_level": null,
+        "requesting_agent": null,
+        "reviewer_subject": null,
+        "reviewer_issuer": null,
+        "authentication_method": null,
         "trace": [
           "asm-bef5a96be3cd76d57ec8aaa1"
         ]
       },
-      "observation_digest": "f321bb8ca818aec64938da38d7b5ff9249ec446fbc4be5726c473e72b4677c7a",
+      "observation_digest": "9484b256fd30ef6512db353fd92815d81a2008e7831b06b14dd77eac98c86fa9",
       "violations": []
     },
     {
@@ -455,11 +563,17 @@
         "error_code": null,
         "target_revision": "rev-target",
         "plan_digest": null,
+        "action_id": null,
+        "risk_level": null,
+        "requesting_agent": null,
+        "reviewer_subject": null,
+        "reviewer_issuer": null,
+        "authentication_method": null,
         "trace": [
           "asm-bef5a96be3cd76d57ec8aaa1"
         ]
       },
-      "observation_digest": "f321bb8ca818aec64938da38d7b5ff9249ec446fbc4be5726c473e72b4677c7a",
+      "observation_digest": "9484b256fd30ef6512db353fd92815d81a2008e7831b06b14dd77eac98c86fa9",
       "violations": []
     },
     {
@@ -480,11 +594,17 @@
         "error_code": null,
         "target_revision": "rev-target",
         "plan_digest": null,
+        "action_id": null,
+        "risk_level": null,
+        "requesting_agent": null,
+        "reviewer_subject": null,
+        "reviewer_issuer": null,
+        "authentication_method": null,
         "trace": [
           "asm-5d1a915e9f207e45683741df"
         ]
       },
-      "observation_digest": "dfb5598aabf9cf7d356970e23db12b73be6af8b543a400e3beccc2895efc0d13",
+      "observation_digest": "7e2ded3896f43b3886e04f802f94d2ce0835501d183fe031f3b65511ab0173b5",
       "violations": []
     },
     {
@@ -505,11 +625,17 @@
         "error_code": null,
         "target_revision": "rev-target",
         "plan_digest": null,
+        "action_id": null,
+        "risk_level": null,
+        "requesting_agent": null,
+        "reviewer_subject": null,
+        "reviewer_issuer": null,
+        "authentication_method": null,
         "trace": [
           "asm-5d1a915e9f207e45683741df"
         ]
       },
-      "observation_digest": "dfb5598aabf9cf7d356970e23db12b73be6af8b543a400e3beccc2895efc0d13",
+      "observation_digest": "7e2ded3896f43b3886e04f802f94d2ce0835501d183fe031f3b65511ab0173b5",
       "violations": []
     },
     {
@@ -530,11 +656,17 @@
         "error_code": null,
         "target_revision": "rev-target",
         "plan_digest": null,
+        "action_id": null,
+        "risk_level": null,
+        "requesting_agent": null,
+        "reviewer_subject": null,
+        "reviewer_issuer": null,
+        "authentication_method": null,
         "trace": [
           "asm-af0fcc97b4f17f2a8a73d877"
         ]
       },
-      "observation_digest": "2e821e3c47d9c30528e47e21c608e9eefb6a8b20825e1399965522531b2dc010",
+      "observation_digest": "9196307d34bcc4fb9a5683107c5f9290937d0cab7ee30be975f039860996b593",
       "violations": []
     },
     {
@@ -555,11 +687,17 @@
         "error_code": null,
         "target_revision": "rev-target",
         "plan_digest": null,
+        "action_id": null,
+        "risk_level": null,
+        "requesting_agent": null,
+        "reviewer_subject": null,
+        "reviewer_issuer": null,
+        "authentication_method": null,
         "trace": [
           "asm-af0fcc97b4f17f2a8a73d877"
         ]
       },
-      "observation_digest": "2e821e3c47d9c30528e47e21c608e9eefb6a8b20825e1399965522531b2dc010",
+      "observation_digest": "9196307d34bcc4fb9a5683107c5f9290937d0cab7ee30be975f039860996b593",
       "violations": []
     },
     {
@@ -580,11 +718,17 @@
         "error_code": null,
         "target_revision": "rev-target",
         "plan_digest": null,
+        "action_id": null,
+        "risk_level": null,
+        "requesting_agent": null,
+        "reviewer_subject": null,
+        "reviewer_issuer": null,
+        "authentication_method": null,
         "trace": [
           "asm-e9c10ab5e4b2496efca49cb9"
         ]
       },
-      "observation_digest": "bef4541112eb145d6864f4c3de5b202c995f0300a7e204a8ec1ef5fc4691fb43",
+      "observation_digest": "5ea1aa12ff14ad00f3613e86c850671314ac49401de42865df9b6bd65a10671f",
       "violations": []
     },
     {
@@ -605,11 +749,17 @@
         "error_code": null,
         "target_revision": "rev-target",
         "plan_digest": null,
+        "action_id": null,
+        "risk_level": null,
+        "requesting_agent": null,
+        "reviewer_subject": null,
+        "reviewer_issuer": null,
+        "authentication_method": null,
         "trace": [
           "asm-e9c10ab5e4b2496efca49cb9"
         ]
       },
-      "observation_digest": "bef4541112eb145d6864f4c3de5b202c995f0300a7e204a8ec1ef5fc4691fb43",
+      "observation_digest": "5ea1aa12ff14ad00f3613e86c850671314ac49401de42865df9b6bd65a10671f",
       "violations": []
     },
     {
@@ -630,11 +780,17 @@
         "error_code": null,
         "target_revision": "rev-target",
         "plan_digest": null,
+        "action_id": null,
+        "risk_level": null,
+        "requesting_agent": null,
+        "reviewer_subject": null,
+        "reviewer_issuer": null,
+        "authentication_method": null,
         "trace": [
           "asm-6e36e8b9dc944b214922713f"
         ]
       },
-      "observation_digest": "f0d8a229544bc24909770906308cc9e761516e41e81e81bc2c938a26395048fc",
+      "observation_digest": "7e6f5b1761f4ed4c3be1321333364f0b0e55195ad0d05240da82647c934848cd",
       "violations": []
     },
     {
@@ -655,11 +811,17 @@
         "error_code": null,
         "target_revision": "rev-target",
         "plan_digest": null,
+        "action_id": null,
+        "risk_level": null,
+        "requesting_agent": null,
+        "reviewer_subject": null,
+        "reviewer_issuer": null,
+        "authentication_method": null,
         "trace": [
           "asm-6e36e8b9dc944b214922713f"
         ]
       },
-      "observation_digest": "f0d8a229544bc24909770906308cc9e761516e41e81e81bc2c938a26395048fc",
+      "observation_digest": "7e6f5b1761f4ed4c3be1321333364f0b0e55195ad0d05240da82647c934848cd",
       "violations": []
     },
     {
@@ -680,11 +842,17 @@
         "error_code": null,
         "target_revision": "rev-target",
         "plan_digest": null,
+        "action_id": null,
+        "risk_level": null,
+        "requesting_agent": null,
+        "reviewer_subject": null,
+        "reviewer_issuer": null,
+        "authentication_method": null,
         "trace": [
           "asm-c6d038892dd83ff69b8eac80"
         ]
       },
-      "observation_digest": "1b2e1245fa09118eaed96c8f1ec3955abb85a3bada54961d69b0f4893508286d",
+      "observation_digest": "12d9ef605084e3e163834418c2121036845ec46d91dfe2d80431a0091e1b7ddc",
       "violations": []
     },
     {
@@ -705,11 +873,17 @@
         "error_code": null,
         "target_revision": "rev-target",
         "plan_digest": null,
+        "action_id": null,
+        "risk_level": null,
+        "requesting_agent": null,
+        "reviewer_subject": null,
+        "reviewer_issuer": null,
+        "authentication_method": null,
         "trace": [
           "asm-c6d038892dd83ff69b8eac80"
         ]
       },
-      "observation_digest": "1b2e1245fa09118eaed96c8f1ec3955abb85a3bada54961d69b0f4893508286d",
+      "observation_digest": "12d9ef605084e3e163834418c2121036845ec46d91dfe2d80431a0091e1b7ddc",
       "violations": []
     },
     {
@@ -730,11 +904,17 @@
         "error_code": null,
         "target_revision": "rev-target",
         "plan_digest": null,
+        "action_id": null,
+        "risk_level": null,
+        "requesting_agent": null,
+        "reviewer_subject": null,
+        "reviewer_issuer": null,
+        "authentication_method": null,
         "trace": [
           "asm-250340c9482ae90ffbaf2b44"
         ]
       },
-      "observation_digest": "14a1a6309a361bcaff89ce6676ce34f76db97126a96edf6b6099d8eb9a3ba255",
+      "observation_digest": "3d8499c1ae6d5b1df0b1eb73895c1c430481373a1a96e65a298af9dcb191292b",
       "violations": []
     },
     {
@@ -755,11 +935,17 @@
         "error_code": null,
         "target_revision": "rev-target",
         "plan_digest": null,
+        "action_id": null,
+        "risk_level": null,
+        "requesting_agent": null,
+        "reviewer_subject": null,
+        "reviewer_issuer": null,
+        "authentication_method": null,
         "trace": [
           "asm-250340c9482ae90ffbaf2b44"
         ]
       },
-      "observation_digest": "14a1a6309a361bcaff89ce6676ce34f76db97126a96edf6b6099d8eb9a3ba255",
+      "observation_digest": "3d8499c1ae6d5b1df0b1eb73895c1c430481373a1a96e65a298af9dcb191292b",
       "violations": []
     },
     {
@@ -779,9 +965,15 @@
         "error_code": null,
         "target_revision": "rev-target",
         "plan_digest": null,
+        "action_id": null,
+        "risk_level": null,
+        "requesting_agent": null,
+        "reviewer_subject": null,
+        "reviewer_issuer": null,
+        "authentication_method": null,
         "trace": []
       },
-      "observation_digest": "c05733df36611ea832faa86dd83c53d309b50c3e9a066ecc7fee44622400ad99",
+      "observation_digest": "72eebef893a5d0dca2456b061d373b6dd2a10882e5b8e80be4280bcbf15634ed",
       "violations": []
     },
     {
@@ -801,9 +993,15 @@
         "error_code": null,
         "target_revision": "rev-target",
         "plan_digest": null,
+        "action_id": null,
+        "risk_level": null,
+        "requesting_agent": null,
+        "reviewer_subject": null,
+        "reviewer_issuer": null,
+        "authentication_method": null,
         "trace": []
       },
-      "observation_digest": "c05733df36611ea832faa86dd83c53d309b50c3e9a066ecc7fee44622400ad99",
+      "observation_digest": "72eebef893a5d0dca2456b061d373b6dd2a10882e5b8e80be4280bcbf15634ed",
       "violations": []
     },
     {
@@ -818,19 +1016,28 @@
         "approval_validated": true,
         "action_executed": true,
         "side_effects": [
-          "artifact:local-contract"
+          "artifact:verified-local"
         ],
         "model_mode": "not_used",
         "idempotency": "applied",
         "error_code": null,
         "target_revision": "rev-target",
-        "plan_digest": "53a006d75fe1dc08a6420dc4798c7956214573b9a16cc1b7e739ec7e851e1296",
+        "plan_digest": "5d28207c084dadc44d288d2acf32112bf9cc39df1f5c65777e2e05403c01730b",
+        "action_id": "run_nimbus_contract_suite",
+        "risk_level": "critical",
+        "requesting_agent": "agent:deterministic-proposal",
+        "reviewer_subject": "google:human-reviewer-001",
+        "reviewer_issuer": "https://accounts.google.com",
+        "authentication_method": "google_oidc_id_token",
         "trace": [
-          "approval_checked",
+          "application_http_api",
+          "google_oidc_reviewer",
+          "requester_independent",
+          "exact_plan_approved",
           "action_executed"
         ]
       },
-      "observation_digest": "b6f18fb1cb0b8b3683ad689326c54c626cc52fb327ccd5f26891c0a55141021b",
+      "observation_digest": "88193291809bad44d71d8326554bdd9265f99ee9c05ab3e16450b6ebf7d808a6",
       "violations": []
     },
     {
@@ -845,19 +1052,28 @@
         "approval_validated": true,
         "action_executed": true,
         "side_effects": [
-          "artifact:local-contract"
+          "artifact:verified-local"
         ],
         "model_mode": "not_used",
         "idempotency": "applied",
         "error_code": null,
         "target_revision": "rev-target",
-        "plan_digest": "53a006d75fe1dc08a6420dc4798c7956214573b9a16cc1b7e739ec7e851e1296",
+        "plan_digest": "5d28207c084dadc44d288d2acf32112bf9cc39df1f5c65777e2e05403c01730b",
+        "action_id": "run_nimbus_contract_suite",
+        "risk_level": "critical",
+        "requesting_agent": "agent:deterministic-proposal",
+        "reviewer_subject": "google:human-reviewer-001",
+        "reviewer_issuer": "https://accounts.google.com",
+        "authentication_method": "google_oidc_id_token",
         "trace": [
-          "approval_checked",
+          "application_http_api",
+          "google_oidc_reviewer",
+          "requester_independent",
+          "exact_plan_approved",
           "action_executed"
         ]
       },
-      "observation_digest": "b6f18fb1cb0b8b3683ad689326c54c626cc52fb327ccd5f26891c0a55141021b",
+      "observation_digest": "88193291809bad44d71d8326554bdd9265f99ee9c05ab3e16450b6ebf7d808a6",
       "violations": []
     },
     {
@@ -878,12 +1094,18 @@
         "error_code": "approval_required",
         "target_revision": "rev-target",
         "plan_digest": "53a006d75fe1dc08a6420dc4798c7956214573b9a16cc1b7e739ec7e851e1296",
+        "action_id": null,
+        "risk_level": null,
+        "requesting_agent": null,
+        "reviewer_subject": null,
+        "reviewer_issuer": null,
+        "authentication_method": null,
         "trace": [
           "approval_checked",
           "action_denied"
         ]
       },
-      "observation_digest": "f9b085af72e9aacb345d56881a6e135fca6ee4fc796f37b8e990dfa4cda43932",
+      "observation_digest": "27f59158cf93b1b97e42cf46e61eb0c624ce944f35b8d4eb91e42b98750abc8d",
       "violations": []
     },
     {
@@ -904,12 +1126,18 @@
         "error_code": "approval_required",
         "target_revision": "rev-target",
         "plan_digest": "53a006d75fe1dc08a6420dc4798c7956214573b9a16cc1b7e739ec7e851e1296",
+        "action_id": null,
+        "risk_level": null,
+        "requesting_agent": null,
+        "reviewer_subject": null,
+        "reviewer_issuer": null,
+        "authentication_method": null,
         "trace": [
           "approval_checked",
           "action_denied"
         ]
       },
-      "observation_digest": "f9b085af72e9aacb345d56881a6e135fca6ee4fc796f37b8e990dfa4cda43932",
+      "observation_digest": "27f59158cf93b1b97e42cf46e61eb0c624ce944f35b8d4eb91e42b98750abc8d",
       "violations": []
     },
     {
@@ -930,12 +1158,18 @@
         "error_code": "approval_not_granted",
         "target_revision": "rev-target",
         "plan_digest": "53a006d75fe1dc08a6420dc4798c7956214573b9a16cc1b7e739ec7e851e1296",
+        "action_id": null,
+        "risk_level": null,
+        "requesting_agent": null,
+        "reviewer_subject": null,
+        "reviewer_issuer": null,
+        "authentication_method": null,
         "trace": [
           "approval_checked",
           "action_denied"
         ]
       },
-      "observation_digest": "0b7d51ada44c3f1df919090994333a4802635dfe5a742ea257af1ee03815bd15",
+      "observation_digest": "d0e1b9233f3ebb4dff5fa61794ce1a714669f4471c97a71247d10e131c4783a7",
       "violations": []
     },
     {
@@ -956,12 +1190,18 @@
         "error_code": "approval_not_granted",
         "target_revision": "rev-target",
         "plan_digest": "53a006d75fe1dc08a6420dc4798c7956214573b9a16cc1b7e739ec7e851e1296",
+        "action_id": null,
+        "risk_level": null,
+        "requesting_agent": null,
+        "reviewer_subject": null,
+        "reviewer_issuer": null,
+        "authentication_method": null,
         "trace": [
           "approval_checked",
           "action_denied"
         ]
       },
-      "observation_digest": "0b7d51ada44c3f1df919090994333a4802635dfe5a742ea257af1ee03815bd15",
+      "observation_digest": "d0e1b9233f3ebb4dff5fa61794ce1a714669f4471c97a71247d10e131c4783a7",
       "violations": []
     },
     {
@@ -982,12 +1222,18 @@
         "error_code": "approval_wrong_plan",
         "target_revision": "rev-target",
         "plan_digest": "53a006d75fe1dc08a6420dc4798c7956214573b9a16cc1b7e739ec7e851e1296",
+        "action_id": null,
+        "risk_level": null,
+        "requesting_agent": null,
+        "reviewer_subject": null,
+        "reviewer_issuer": null,
+        "authentication_method": null,
         "trace": [
           "approval_checked",
           "action_denied"
         ]
       },
-      "observation_digest": "fefa76710d3b93ebf94140f7043bd599be69209c40c54f7345446e221e97b894",
+      "observation_digest": "2ae992b9871e9922994b51e2e0ebed09e25a18120c94862f33a984a8d376000b",
       "violations": []
     },
     {
@@ -1008,12 +1254,18 @@
         "error_code": "approval_wrong_plan",
         "target_revision": "rev-target",
         "plan_digest": "53a006d75fe1dc08a6420dc4798c7956214573b9a16cc1b7e739ec7e851e1296",
+        "action_id": null,
+        "risk_level": null,
+        "requesting_agent": null,
+        "reviewer_subject": null,
+        "reviewer_issuer": null,
+        "authentication_method": null,
         "trace": [
           "approval_checked",
           "action_denied"
         ]
       },
-      "observation_digest": "fefa76710d3b93ebf94140f7043bd599be69209c40c54f7345446e221e97b894",
+      "observation_digest": "2ae992b9871e9922994b51e2e0ebed09e25a18120c94862f33a984a8d376000b",
       "violations": []
     },
     {
@@ -1034,12 +1286,18 @@
         "error_code": "approval_wrong_revision",
         "target_revision": "rev-target",
         "plan_digest": "53a006d75fe1dc08a6420dc4798c7956214573b9a16cc1b7e739ec7e851e1296",
+        "action_id": null,
+        "risk_level": null,
+        "requesting_agent": null,
+        "reviewer_subject": null,
+        "reviewer_issuer": null,
+        "authentication_method": null,
         "trace": [
           "approval_checked",
           "action_denied"
         ]
       },
-      "observation_digest": "1b745eceed19b78523918403b658a865596ceb4b600e90be86942b84b11b05e0",
+      "observation_digest": "e7d2d942939b400fdc8eb32fd23f4ff1e5164604ddf3b2f9a2ca66920afc3a90",
       "violations": []
     },
     {
@@ -1060,12 +1318,18 @@
         "error_code": "approval_wrong_revision",
         "target_revision": "rev-target",
         "plan_digest": "53a006d75fe1dc08a6420dc4798c7956214573b9a16cc1b7e739ec7e851e1296",
+        "action_id": null,
+        "risk_level": null,
+        "requesting_agent": null,
+        "reviewer_subject": null,
+        "reviewer_issuer": null,
+        "authentication_method": null,
         "trace": [
           "approval_checked",
           "action_denied"
         ]
       },
-      "observation_digest": "1b745eceed19b78523918403b658a865596ceb4b600e90be86942b84b11b05e0",
+      "observation_digest": "e7d2d942939b400fdc8eb32fd23f4ff1e5164604ddf3b2f9a2ca66920afc3a90",
       "violations": []
     },
     {
@@ -1086,12 +1350,18 @@
         "error_code": "approval_wrong_digest",
         "target_revision": "rev-target",
         "plan_digest": "53a006d75fe1dc08a6420dc4798c7956214573b9a16cc1b7e739ec7e851e1296",
+        "action_id": null,
+        "risk_level": null,
+        "requesting_agent": null,
+        "reviewer_subject": null,
+        "reviewer_issuer": null,
+        "authentication_method": null,
         "trace": [
           "approval_checked",
           "action_denied"
         ]
       },
-      "observation_digest": "8da657bfdc12e228083752454ebb12d240a895d9826bc2f33c77884799aecb6d",
+      "observation_digest": "9f479c989d0907f15ea0ac2f207224bc07ad37241cf44542b09a519b18ebc1bc",
       "violations": []
     },
     {
@@ -1112,12 +1382,18 @@
         "error_code": "approval_wrong_digest",
         "target_revision": "rev-target",
         "plan_digest": "53a006d75fe1dc08a6420dc4798c7956214573b9a16cc1b7e739ec7e851e1296",
+        "action_id": null,
+        "risk_level": null,
+        "requesting_agent": null,
+        "reviewer_subject": null,
+        "reviewer_issuer": null,
+        "authentication_method": null,
         "trace": [
           "approval_checked",
           "action_denied"
         ]
       },
-      "observation_digest": "8da657bfdc12e228083752454ebb12d240a895d9826bc2f33c77884799aecb6d",
+      "observation_digest": "9f479c989d0907f15ea0ac2f207224bc07ad37241cf44542b09a519b18ebc1bc",
       "violations": []
     },
     {
@@ -1138,12 +1414,18 @@
         "error_code": "approval_wrong_target",
         "target_revision": "rev-target",
         "plan_digest": "53a006d75fe1dc08a6420dc4798c7956214573b9a16cc1b7e739ec7e851e1296",
+        "action_id": null,
+        "risk_level": null,
+        "requesting_agent": null,
+        "reviewer_subject": null,
+        "reviewer_issuer": null,
+        "authentication_method": null,
         "trace": [
           "approval_checked",
           "action_denied"
         ]
       },
-      "observation_digest": "79032616cd1fccd48d44f7f0545572a834afb188380c98acdfeeed8983b765f8",
+      "observation_digest": "af4b35c25bfee5ccc44048553ca42c0f090c2fed7cca6c5141522ca84f3e1496",
       "violations": []
     },
     {
@@ -1164,12 +1446,18 @@
         "error_code": "approval_wrong_target",
         "target_revision": "rev-target",
         "plan_digest": "53a006d75fe1dc08a6420dc4798c7956214573b9a16cc1b7e739ec7e851e1296",
+        "action_id": null,
+        "risk_level": null,
+        "requesting_agent": null,
+        "reviewer_subject": null,
+        "reviewer_issuer": null,
+        "authentication_method": null,
         "trace": [
           "approval_checked",
           "action_denied"
         ]
       },
-      "observation_digest": "79032616cd1fccd48d44f7f0545572a834afb188380c98acdfeeed8983b765f8",
+      "observation_digest": "af4b35c25bfee5ccc44048553ca42c0f090c2fed7cca6c5141522ca84f3e1496",
       "violations": []
     },
     {
@@ -1190,12 +1478,18 @@
         "error_code": "approval_expired",
         "target_revision": "rev-target",
         "plan_digest": "53a006d75fe1dc08a6420dc4798c7956214573b9a16cc1b7e739ec7e851e1296",
+        "action_id": null,
+        "risk_level": null,
+        "requesting_agent": null,
+        "reviewer_subject": null,
+        "reviewer_issuer": null,
+        "authentication_method": null,
         "trace": [
           "approval_checked",
           "action_denied"
         ]
       },
-      "observation_digest": "ba8b89857d6e7b648c8cef9582accca853118b460d5ec7f555779c5bbd43ed92",
+      "observation_digest": "e90b73f6d05d9e6d47da3861f94929288d07521146ce41f304a8d70ac5ab7425",
       "violations": []
     },
     {
@@ -1216,12 +1510,18 @@
         "error_code": "approval_expired",
         "target_revision": "rev-target",
         "plan_digest": "53a006d75fe1dc08a6420dc4798c7956214573b9a16cc1b7e739ec7e851e1296",
+        "action_id": null,
+        "risk_level": null,
+        "requesting_agent": null,
+        "reviewer_subject": null,
+        "reviewer_issuer": null,
+        "authentication_method": null,
         "trace": [
           "approval_checked",
           "action_denied"
         ]
       },
-      "observation_digest": "ba8b89857d6e7b648c8cef9582accca853118b460d5ec7f555779c5bbd43ed92",
+      "observation_digest": "e90b73f6d05d9e6d47da3861f94929288d07521146ce41f304a8d70ac5ab7425",
       "violations": []
     },
     {
@@ -1243,12 +1543,18 @@
         "error_code": null,
         "target_revision": "rev-target",
         "plan_digest": "53a006d75fe1dc08a6420dc4798c7956214573b9a16cc1b7e739ec7e851e1296",
+        "action_id": null,
+        "risk_level": null,
+        "requesting_agent": null,
+        "reviewer_subject": null,
+        "reviewer_issuer": null,
+        "authentication_method": null,
         "trace": [
           "approval_checked",
           "action_executed"
         ]
       },
-      "observation_digest": "038c9b20b161a9d3843678119056d07cbf77488182997e1181a984d71db1292a",
+      "observation_digest": "5523c86b528973f5b52dc6340b932a3591b6d195bc0e555cd6a39d54a6dc0140",
       "violations": []
     },
     {
@@ -1270,12 +1576,18 @@
         "error_code": null,
         "target_revision": "rev-target",
         "plan_digest": "53a006d75fe1dc08a6420dc4798c7956214573b9a16cc1b7e739ec7e851e1296",
+        "action_id": null,
+        "risk_level": null,
+        "requesting_agent": null,
+        "reviewer_subject": null,
+        "reviewer_issuer": null,
+        "authentication_method": null,
         "trace": [
           "approval_checked",
           "action_executed"
         ]
       },
-      "observation_digest": "038c9b20b161a9d3843678119056d07cbf77488182997e1181a984d71db1292a",
+      "observation_digest": "5523c86b528973f5b52dc6340b932a3591b6d195bc0e555cd6a39d54a6dc0140",
       "violations": []
     },
     {
@@ -1298,12 +1610,18 @@
         "error_code": "idempotency_conflict",
         "target_revision": "rev-target",
         "plan_digest": "53a006d75fe1dc08a6420dc4798c7956214573b9a16cc1b7e739ec7e851e1296",
+        "action_id": null,
+        "risk_level": null,
+        "requesting_agent": null,
+        "reviewer_subject": null,
+        "reviewer_issuer": null,
+        "authentication_method": null,
         "trace": [
           "approval_checked",
           "action_executed"
         ]
       },
-      "observation_digest": "7f31d453243c89c15a6f50462265402a8b29eeb915f4d65023d623e3d2ea2fed",
+      "observation_digest": "20f06bee7a04cd7ac362bff9bdd442fe8e6d4934473280440b0ca9fc425e45b7",
       "violations": []
     },
     {
@@ -1326,12 +1644,18 @@
         "error_code": "idempotency_conflict",
         "target_revision": "rev-target",
         "plan_digest": "53a006d75fe1dc08a6420dc4798c7956214573b9a16cc1b7e739ec7e851e1296",
+        "action_id": null,
+        "risk_level": null,
+        "requesting_agent": null,
+        "reviewer_subject": null,
+        "reviewer_issuer": null,
+        "authentication_method": null,
         "trace": [
           "approval_checked",
           "action_executed"
         ]
       },
-      "observation_digest": "7f31d453243c89c15a6f50462265402a8b29eeb915f4d65023d623e3d2ea2fed",
+      "observation_digest": "20f06bee7a04cd7ac362bff9bdd442fe8e6d4934473280440b0ca9fc425e45b7",
       "violations": []
     },
     {
@@ -1352,12 +1676,18 @@
         "error_code": "action_not_allowed",
         "target_revision": "rev-target",
         "plan_digest": "53a006d75fe1dc08a6420dc4798c7956214573b9a16cc1b7e739ec7e851e1296",
+        "action_id": null,
+        "risk_level": null,
+        "requesting_agent": null,
+        "reviewer_subject": null,
+        "reviewer_issuer": null,
+        "authentication_method": null,
         "trace": [
           "approval_checked",
           "action_denied"
         ]
       },
-      "observation_digest": "bf3e7db3010fb6b1a53c2af9e96300828dace5723570b5dea8f0348c0c008439",
+      "observation_digest": "d2a2da707c271795d5a699e56e787975c3ebaf8827dce71a8e40fd01b7cf3bdc",
       "violations": []
     },
     {
@@ -1378,12 +1708,18 @@
         "error_code": "action_not_allowed",
         "target_revision": "rev-target",
         "plan_digest": "53a006d75fe1dc08a6420dc4798c7956214573b9a16cc1b7e739ec7e851e1296",
+        "action_id": null,
+        "risk_level": null,
+        "requesting_agent": null,
+        "reviewer_subject": null,
+        "reviewer_issuer": null,
+        "authentication_method": null,
         "trace": [
           "approval_checked",
           "action_denied"
         ]
       },
-      "observation_digest": "bf3e7db3010fb6b1a53c2af9e96300828dace5723570b5dea8f0348c0c008439",
+      "observation_digest": "d2a2da707c271795d5a699e56e787975c3ebaf8827dce71a8e40fd01b7cf3bdc",
       "violations": []
     },
     {
@@ -1404,12 +1740,18 @@
         "error_code": "approval_wrong_digest",
         "target_revision": "rev-target",
         "plan_digest": "aa893d49da36df1b6040d3cd9f6dbfc4c08795de2347f37cc47803cf64305986",
+        "action_id": null,
+        "risk_level": null,
+        "requesting_agent": null,
+        "reviewer_subject": null,
+        "reviewer_issuer": null,
+        "authentication_method": null,
         "trace": [
           "approval_checked",
           "action_denied"
         ]
       },
-      "observation_digest": "6f00e2458099c60fa042164644817039d98455980a3cbf839b9dd52d5f15b2ed",
+      "observation_digest": "8aaad241e7f88f8c66164832ee98decd98c183172d9cdd4aded4e12219e50923",
       "violations": []
     },
     {
@@ -1430,14 +1772,220 @@
         "error_code": "approval_wrong_digest",
         "target_revision": "rev-target",
         "plan_digest": "aa893d49da36df1b6040d3cd9f6dbfc4c08795de2347f37cc47803cf64305986",
+        "action_id": null,
+        "risk_level": null,
+        "requesting_agent": null,
+        "reviewer_subject": null,
+        "reviewer_issuer": null,
+        "authentication_method": null,
         "trace": [
           "approval_checked",
           "action_denied"
         ]
       },
-      "observation_digest": "6f00e2458099c60fa042164644817039d98455980a3cbf839b9dd52d5f15b2ed",
+      "observation_digest": "8aaad241e7f88f8c66164832ee98decd98c183172d9cdd4aded4e12219e50923",
+      "violations": []
+    },
+    {
+      "scenario_id": "AO-EVAL-28",
+      "repetition": 1,
+      "observation": {
+        "scenario_id": "AO-EVAL-28",
+        "decision": "incomplete",
+        "finding_codes": [
+          "missing",
+          "authorization_denied"
+        ],
+        "approval_validated": false,
+        "action_executed": false,
+        "side_effects": [],
+        "model_mode": "not_used",
+        "idempotency": "not_applicable",
+        "error_code": "authentication_required",
+        "target_revision": "rev-target",
+        "plan_digest": "5d28207c084dadc44d288d2acf32112bf9cc39df1f5c65777e2e05403c01730b",
+        "action_id": "run_nimbus_contract_suite",
+        "risk_level": "critical",
+        "requesting_agent": "agent:deterministic-proposal",
+        "reviewer_subject": null,
+        "reviewer_issuer": null,
+        "authentication_method": null,
+        "trace": [
+          "application_http_api",
+          "body_identity_rejected",
+          "http:401",
+          "authentication_required"
+        ]
+      },
+      "observation_digest": "55faed274ed1607a12d2eb40890d2f63d9fa30d665368fa89c3570dba27df62d",
+      "violations": []
+    },
+    {
+      "scenario_id": "AO-EVAL-28",
+      "repetition": 2,
+      "observation": {
+        "scenario_id": "AO-EVAL-28",
+        "decision": "incomplete",
+        "finding_codes": [
+          "missing",
+          "authorization_denied"
+        ],
+        "approval_validated": false,
+        "action_executed": false,
+        "side_effects": [],
+        "model_mode": "not_used",
+        "idempotency": "not_applicable",
+        "error_code": "authentication_required",
+        "target_revision": "rev-target",
+        "plan_digest": "5d28207c084dadc44d288d2acf32112bf9cc39df1f5c65777e2e05403c01730b",
+        "action_id": "run_nimbus_contract_suite",
+        "risk_level": "critical",
+        "requesting_agent": "agent:deterministic-proposal",
+        "reviewer_subject": null,
+        "reviewer_issuer": null,
+        "authentication_method": null,
+        "trace": [
+          "application_http_api",
+          "body_identity_rejected",
+          "http:401",
+          "authentication_required"
+        ]
+      },
+      "observation_digest": "55faed274ed1607a12d2eb40890d2f63d9fa30d665368fa89c3570dba27df62d",
+      "violations": []
+    },
+    {
+      "scenario_id": "AO-EVAL-29",
+      "repetition": 1,
+      "observation": {
+        "scenario_id": "AO-EVAL-29",
+        "decision": "incomplete",
+        "finding_codes": [
+          "missing",
+          "authorization_denied"
+        ],
+        "approval_validated": false,
+        "action_executed": false,
+        "side_effects": [],
+        "model_mode": "not_used",
+        "idempotency": "not_applicable",
+        "error_code": "reviewer_not_independent",
+        "target_revision": "rev-target",
+        "plan_digest": "5d28207c084dadc44d288d2acf32112bf9cc39df1f5c65777e2e05403c01730b",
+        "action_id": "run_nimbus_contract_suite",
+        "risk_level": "critical",
+        "requesting_agent": "agent:deterministic-proposal",
+        "reviewer_subject": "agent:deterministic-proposal",
+        "reviewer_issuer": "assureops-evaluation",
+        "authentication_method": "synthetic_verified_identity",
+        "trace": [
+          "application_http_api",
+          "http:403",
+          "reviewer_not_independent"
+        ]
+      },
+      "observation_digest": "0aea2e55ac3bd799d579a60e955067e292b9d4b964ed2341eb6f168b0577f4ff",
+      "violations": []
+    },
+    {
+      "scenario_id": "AO-EVAL-29",
+      "repetition": 2,
+      "observation": {
+        "scenario_id": "AO-EVAL-29",
+        "decision": "incomplete",
+        "finding_codes": [
+          "missing",
+          "authorization_denied"
+        ],
+        "approval_validated": false,
+        "action_executed": false,
+        "side_effects": [],
+        "model_mode": "not_used",
+        "idempotency": "not_applicable",
+        "error_code": "reviewer_not_independent",
+        "target_revision": "rev-target",
+        "plan_digest": "5d28207c084dadc44d288d2acf32112bf9cc39df1f5c65777e2e05403c01730b",
+        "action_id": "run_nimbus_contract_suite",
+        "risk_level": "critical",
+        "requesting_agent": "agent:deterministic-proposal",
+        "reviewer_subject": "agent:deterministic-proposal",
+        "reviewer_issuer": "assureops-evaluation",
+        "authentication_method": "synthetic_verified_identity",
+        "trace": [
+          "application_http_api",
+          "http:403",
+          "reviewer_not_independent"
+        ]
+      },
+      "observation_digest": "0aea2e55ac3bd799d579a60e955067e292b9d4b964ed2341eb6f168b0577f4ff",
+      "violations": []
+    },
+    {
+      "scenario_id": "AO-EVAL-30",
+      "repetition": 1,
+      "observation": {
+        "scenario_id": "AO-EVAL-30",
+        "decision": "incomplete",
+        "finding_codes": [
+          "missing",
+          "authorization_denied"
+        ],
+        "approval_validated": false,
+        "action_executed": false,
+        "side_effects": [],
+        "model_mode": "not_used",
+        "idempotency": "not_applicable",
+        "error_code": "reviewer_role_required",
+        "target_revision": "rev-target",
+        "plan_digest": "5d28207c084dadc44d288d2acf32112bf9cc39df1f5c65777e2e05403c01730b",
+        "action_id": "run_nimbus_contract_suite",
+        "risk_level": "critical",
+        "requesting_agent": "agent:deterministic-proposal",
+        "reviewer_subject": "google:human-reviewer-001",
+        "reviewer_issuer": "https://accounts.google.com",
+        "authentication_method": "google_oidc_id_token",
+        "trace": [
+          "application_http_api",
+          "http:403",
+          "reviewer_role_required"
+        ]
+      },
+      "observation_digest": "ce4bb4b2adc80fa732d8003e691932a94de4a04773e8421ee0618b8013db3147",
+      "violations": []
+    },
+    {
+      "scenario_id": "AO-EVAL-30",
+      "repetition": 2,
+      "observation": {
+        "scenario_id": "AO-EVAL-30",
+        "decision": "incomplete",
+        "finding_codes": [
+          "missing",
+          "authorization_denied"
+        ],
+        "approval_validated": false,
+        "action_executed": false,
+        "side_effects": [],
+        "model_mode": "not_used",
+        "idempotency": "not_applicable",
+        "error_code": "reviewer_role_required",
+        "target_revision": "rev-target",
+        "plan_digest": "5d28207c084dadc44d288d2acf32112bf9cc39df1f5c65777e2e05403c01730b",
+        "action_id": "run_nimbus_contract_suite",
+        "risk_level": "critical",
+        "requesting_agent": "agent:deterministic-proposal",
+        "reviewer_subject": "google:human-reviewer-001",
+        "reviewer_issuer": "https://accounts.google.com",
+        "authentication_method": "google_oidc_id_token",
+        "trace": [
+          "application_http_api",
+          "http:403",
+          "reviewer_role_required"
+        ]
+      },
+      "observation_digest": "ce4bb4b2adc80fa732d8003e691932a94de4a04773e8421ee0618b8013db3147",
       "violations": []
     }
   ],
-  "report_digest": "b84c5dfb631a28d440345051decc09c69214bfa4f7a9ba07e6e3fa4c8349a8e4"
+  "report_digest": "f3846064da73d9c1769ed4b6447d089bbef45cacdc11d92a6a2cdae9e62f23ee"
 }

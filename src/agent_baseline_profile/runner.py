@@ -16,6 +16,7 @@ class EvaluationArtifactError(ValueError):
 def _validate_report(report: dict[str, Any], protocol: str) -> None:
     required = {
         "protocol_version",
+        "target",
         "repeats",
         "passed",
         "metrics",
@@ -105,6 +106,7 @@ def evaluate_report(
         "system_under_test": profile["system_under_test"],
         "source_evaluation": {
             "protocol_version": source_report["protocol_version"],
+            "target": source_report["target"],
             "report_digest": source_report["report_digest"],
             "file_sha256": source_file_sha256,
             "passed": source_report["passed"],

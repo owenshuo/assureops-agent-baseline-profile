@@ -1,6 +1,6 @@
 # Draft test method: exact and independent approval binding
 
-Status: local review draft; not submitted.
+Status: implementation-backed local review draft; not submitted.
 
 Primary control: `AUT-05` Independent approval.
 
@@ -53,5 +53,9 @@ correlated to the original request and policy decision.
 2. Keep the method vendor-neutral; link implementation evidence separately.
 3. Disclose the contributor's name and affiliation as required upstream.
 4. Do not claim certification or complete Agent Baseline conformance.
-5. Do not submit until an implementation test proves authenticated reviewer
-   identity and requester-reviewer independence.
+5. Implementation prerequisite satisfied by AssureOps tag
+   `agent-baseline-aut05-v2`: the application-API evaluation proves a
+   Google-OIDC-mapped reviewer, requester-reviewer independence, exact
+   plan/action binding, and zero side effects for forged, self, and
+   unprivileged review attempts. Upstream submission still requires separate
+   human review and authorization.

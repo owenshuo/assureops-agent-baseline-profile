@@ -20,19 +20,22 @@ def source_report() -> tuple[dict[str, object], str]:
     return json.loads(content), file_digest(content)
 
 
-def test_pinned_fixture_produces_ten_partial_controls_without_overclaiming() -> None:
+def test_pinned_fixture_evidences_only_scoped_independent_approval() -> None:
     profile = load_profile(ROOT / "profile" / "assureops.yaml")
     report, digest = source_report()
     result = evaluate_report(profile, report, source_file_sha256=digest)
     assert result["summary"] == {
         "control_count": 35,
         "executable_method_count": 10,
-        "evidenced": 0,
-        "partial": 10,
+        "evidenced": 1,
+        "partial": 9,
         "gap": 0,
         "not_assessed": 25,
     }
     assert len(result["profile_report_digest"]) == 64
+    control = next(item for item in result["controls"] if item["id"] == "AUT-05")
+    assert control["effective_state"] == "evidenced"
+    assert all(check["passed"] for check in control["checks"])
 
 
 def test_profile_report_is_deterministic() -> None:
@@ -65,6 +68,25 @@ def test_broken_approval_gate_demotes_control_to_gap() -> None:
     result = evaluate_report(profile, report, source_file_sha256=digest)
     control = next(item for item in result["controls"] if item["id"] == "AUT-02")
     assert control["declared_state"] == "partial"
+    assert control["effective_state"] == "gap"
+
+
+def test_non_independent_valid_reviewer_demotes_aut05_to_gap() -> None:
+    profile = load_profile(ROOT / "profile" / "assureops.yaml")
+    report, digest = source_report()
+    report = copy.deepcopy(report)
+    for run in report["runs"]:
+        if run["scenario_id"] == "AO-EVAL-16":
+            observation = run["observation"]
+            observation["reviewer_subject"] = observation["requesting_agent"]
+            run["observation_digest"] = content_digest(observation)
+    identity = {key: value for key, value in report.items() if key != "report_digest"}
+    report["report_digest"] = content_digest(identity)
+
+    result = evaluate_report(profile, report, source_file_sha256=digest)
+
+    control = next(item for item in result["controls"] if item["id"] == "AUT-05")
+    assert control["declared_state"] == "evidenced"
     assert control["effective_state"] == "gap"
 
 

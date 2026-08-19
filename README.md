@@ -21,8 +21,8 @@ data, or treat a passing scoped test as full Agent Baseline conformance.
 - Agent Baseline controls SHA-256:
   `23864515ef28e54522977ed630265a98b638216d3618ecb6c319a21ed9242666`
 - AssureOps repository commit:
-  `73a6aa0bb28ea8e475d2d0db16bdb5845dc99ae3`
-- AssureOps immutable tag: `all-things-agentic-2026-submission`
+  `09933932d93bf9f1a8ae5706bffbbc21fe29d89e`
+- AssureOps immutable tag: `agent-baseline-aut05-v2`
 
 These values live in `profile/assureops.yaml` and are enforced by the runner.
 
@@ -98,7 +98,8 @@ assureops_agent:   executed at an immutable commit, not modified
 ## Upstream contribution
 
 `docs/upstream-feedback-aut-05-draft.md` contains a review-first, vendor-neutral
-proposal for exact approval binding. `docs/upstream-feedback-val-04-draft.md`
+proposal for exact approval binding backed by the pinned implementation evidence.
+`docs/upstream-feedback-val-04-draft.md`
 records a separate post-action validation method that is not yet ready to
 submit because the current profile does not implement it. Nothing is submitted
 to Agent Baseline without separate review and authorization.
