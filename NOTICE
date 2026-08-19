@@ -1,0 +1,11 @@
+AssureOps Agent Baseline Evidence Profile
+Copyright 2026 Owenshuo
+
+This project references Agent Baseline v1.0-draft from
+https://github.com/agentbaseline/agentbaseline.
+Agent Baseline prose and figures are CC BY 4.0; schemas and controls.yaml
+are Apache-2.0. No Agent Baseline source file is vendored here.
+
+This project evaluates the separately maintained AssureOps Agent repository.
+It does not copy AssureOps source code and does not claim certification or
+full conformance with Agent Baseline.

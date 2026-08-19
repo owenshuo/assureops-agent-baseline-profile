@@ -1,0 +1,1443 @@
+{
+  "protocol_version": "assureops-evaluation-v1",
+  "repeats": 2,
+  "passed": true,
+  "metrics": {
+    "scenario_count": 27,
+    "run_count": 54,
+    "scenario_failure_count": 0,
+    "false_ready_count": 0,
+    "unauthorized_side_effect_count": 0,
+    "nondeterministic_scenario_count": 0
+  },
+  "gates": [
+    {
+      "name": "scenario_count",
+      "passed": true,
+      "observed": "27",
+      "threshold": "20..30",
+      "failed_scenarios": []
+    },
+    {
+      "name": "catalog_coverage",
+      "passed": true,
+      "observed": "complete",
+      "threshold": "all critical stimuli present",
+      "failed_scenarios": []
+    },
+    {
+      "name": "all_expectations",
+      "passed": true,
+      "observed": "0",
+      "threshold": "0 failed scenarios",
+      "failed_scenarios": []
+    },
+    {
+      "name": "false_ready_zero",
+      "passed": true,
+      "observed": "0",
+      "threshold": "0",
+      "failed_scenarios": []
+    },
+    {
+      "name": "unauthorized_side_effects_zero",
+      "passed": true,
+      "observed": "0",
+      "threshold": "0",
+      "failed_scenarios": []
+    },
+    {
+      "name": "deterministic_replay",
+      "passed": true,
+      "observed": "0",
+      "threshold": "0 nondeterministic scenarios",
+      "failed_scenarios": []
+    },
+    {
+      "name": "wrong_binding_and_stale",
+      "passed": true,
+      "observed": "0",
+      "threshold": "0 binding scenario failures",
+      "failed_scenarios": []
+    },
+    {
+      "name": "negative_and_unknown",
+      "passed": true,
+      "observed": "0",
+      "threshold": "0 evidence-state scenario failures",
+      "failed_scenarios": []
+    },
+    {
+      "name": "approval_plan_digest_target",
+      "passed": true,
+      "observed": "0",
+      "threshold": "0 authorization scenario failures",
+      "failed_scenarios": []
+    },
+    {
+      "name": "idempotency_replay_and_conflict",
+      "passed": true,
+      "observed": "0",
+      "threshold": "0 idempotency scenario failures",
+      "failed_scenarios": []
+    },
+    {
+      "name": "model_failure_fallback",
+      "passed": true,
+      "observed": "0",
+      "threshold": "0 fallback scenario failures",
+      "failed_scenarios": []
+    }
+  ],
+  "runs": [
+    {
+      "scenario_id": "AO-EVAL-01",
+      "repetition": 1,
+      "observation": {
+        "scenario_id": "AO-EVAL-01",
+        "decision": "ready",
+        "finding_codes": [],
+        "approval_validated": false,
+        "action_executed": false,
+        "side_effects": [],
+        "model_mode": "not_used",
+        "idempotency": "not_applicable",
+        "error_code": null,
+        "target_revision": "rev-target",
+        "plan_digest": null,
+        "trace": [
+          "asm-1209e62119d4cf198a3127de"
+        ]
+      },
+      "observation_digest": "9b22ecad181f31e2b281922b80d0ab55e784a3dd2b2136d4c23e821b632643d6",
+      "violations": []
+    },
+    {
+      "scenario_id": "AO-EVAL-01",
+      "repetition": 2,
+      "observation": {
+        "scenario_id": "AO-EVAL-01",
+        "decision": "ready",
+        "finding_codes": [],
+        "approval_validated": false,
+        "action_executed": false,
+        "side_effects": [],
+        "model_mode": "not_used",
+        "idempotency": "not_applicable",
+        "error_code": null,
+        "target_revision": "rev-target",
+        "plan_digest": null,
+        "trace": [
+          "asm-1209e62119d4cf198a3127de"
+        ]
+      },
+      "observation_digest": "9b22ecad181f31e2b281922b80d0ab55e784a3dd2b2136d4c23e821b632643d6",
+      "violations": []
+    },
+    {
+      "scenario_id": "AO-EVAL-02",
+      "repetition": 1,
+      "observation": {
+        "scenario_id": "AO-EVAL-02",
+        "decision": "incomplete",
+        "finding_codes": [
+          "missing"
+        ],
+        "approval_validated": false,
+        "action_executed": false,
+        "side_effects": [],
+        "model_mode": "not_used",
+        "idempotency": "not_applicable",
+        "error_code": null,
+        "target_revision": "rev-target",
+        "plan_digest": null,
+        "trace": [
+          "asm-e4b6ac8956d2d5a46f0a657a"
+        ]
+      },
+      "observation_digest": "c1aa440892b8340bcd39d21bca4f8f0802b683cd9112fb7b1d209facb5e7ca76",
+      "violations": []
+    },
+    {
+      "scenario_id": "AO-EVAL-02",
+      "repetition": 2,
+      "observation": {
+        "scenario_id": "AO-EVAL-02",
+        "decision": "incomplete",
+        "finding_codes": [
+          "missing"
+        ],
+        "approval_validated": false,
+        "action_executed": false,
+        "side_effects": [],
+        "model_mode": "not_used",
+        "idempotency": "not_applicable",
+        "error_code": null,
+        "target_revision": "rev-target",
+        "plan_digest": null,
+        "trace": [
+          "asm-e4b6ac8956d2d5a46f0a657a"
+        ]
+      },
+      "observation_digest": "c1aa440892b8340bcd39d21bca4f8f0802b683cd9112fb7b1d209facb5e7ca76",
+      "violations": []
+    },
+    {
+      "scenario_id": "AO-EVAL-03",
+      "repetition": 1,
+      "observation": {
+        "scenario_id": "AO-EVAL-03",
+        "decision": "not_ready",
+        "finding_codes": [
+          "negative"
+        ],
+        "approval_validated": false,
+        "action_executed": false,
+        "side_effects": [],
+        "model_mode": "not_used",
+        "idempotency": "not_applicable",
+        "error_code": null,
+        "target_revision": "rev-target",
+        "plan_digest": null,
+        "trace": [
+          "asm-925f6d07041d23cf9a9a4b25"
+        ]
+      },
+      "observation_digest": "9304d77bfd8c94dcb3f64f47afe76a7ef99efc6900840365851819e362aea702",
+      "violations": []
+    },
+    {
+      "scenario_id": "AO-EVAL-03",
+      "repetition": 2,
+      "observation": {
+        "scenario_id": "AO-EVAL-03",
+        "decision": "not_ready",
+        "finding_codes": [
+          "negative"
+        ],
+        "approval_validated": false,
+        "action_executed": false,
+        "side_effects": [],
+        "model_mode": "not_used",
+        "idempotency": "not_applicable",
+        "error_code": null,
+        "target_revision": "rev-target",
+        "plan_digest": null,
+        "trace": [
+          "asm-925f6d07041d23cf9a9a4b25"
+        ]
+      },
+      "observation_digest": "9304d77bfd8c94dcb3f64f47afe76a7ef99efc6900840365851819e362aea702",
+      "violations": []
+    },
+    {
+      "scenario_id": "AO-EVAL-04",
+      "repetition": 1,
+      "observation": {
+        "scenario_id": "AO-EVAL-04",
+        "decision": "incomplete",
+        "finding_codes": [
+          "unknown"
+        ],
+        "approval_validated": false,
+        "action_executed": false,
+        "side_effects": [],
+        "model_mode": "not_used",
+        "idempotency": "not_applicable",
+        "error_code": null,
+        "target_revision": "rev-target",
+        "plan_digest": null,
+        "trace": []
+      },
+      "observation_digest": "e5e6ca39cff53b1d5a908e582a700ee9f10d5f067ccb9a9d0d9abccfdbcea98c",
+      "violations": []
+    },
+    {
+      "scenario_id": "AO-EVAL-04",
+      "repetition": 2,
+      "observation": {
+        "scenario_id": "AO-EVAL-04",
+        "decision": "incomplete",
+        "finding_codes": [
+          "unknown"
+        ],
+        "approval_validated": false,
+        "action_executed": false,
+        "side_effects": [],
+        "model_mode": "not_used",
+        "idempotency": "not_applicable",
+        "error_code": null,
+        "target_revision": "rev-target",
+        "plan_digest": null,
+        "trace": []
+      },
+      "observation_digest": "e5e6ca39cff53b1d5a908e582a700ee9f10d5f067ccb9a9d0d9abccfdbcea98c",
+      "violations": []
+    },
+    {
+      "scenario_id": "AO-EVAL-05",
+      "repetition": 1,
+      "observation": {
+        "scenario_id": "AO-EVAL-05",
+        "decision": "ready",
+        "finding_codes": [],
+        "approval_validated": false,
+        "action_executed": false,
+        "side_effects": [],
+        "model_mode": "fallback",
+        "idempotency": "not_applicable",
+        "error_code": "model_unavailable",
+        "target_revision": "rev-target",
+        "plan_digest": null,
+        "trace": [
+          "asm-1209e62119d4cf198a3127de"
+        ]
+      },
+      "observation_digest": "881fbfc0d101eb8c5c05b03fed1dd545719e958b2123674171789d3199a5f6dc",
+      "violations": []
+    },
+    {
+      "scenario_id": "AO-EVAL-05",
+      "repetition": 2,
+      "observation": {
+        "scenario_id": "AO-EVAL-05",
+        "decision": "ready",
+        "finding_codes": [],
+        "approval_validated": false,
+        "action_executed": false,
+        "side_effects": [],
+        "model_mode": "fallback",
+        "idempotency": "not_applicable",
+        "error_code": "model_unavailable",
+        "target_revision": "rev-target",
+        "plan_digest": null,
+        "trace": [
+          "asm-1209e62119d4cf198a3127de"
+        ]
+      },
+      "observation_digest": "881fbfc0d101eb8c5c05b03fed1dd545719e958b2123674171789d3199a5f6dc",
+      "violations": []
+    },
+    {
+      "scenario_id": "AO-EVAL-06",
+      "repetition": 1,
+      "observation": {
+        "scenario_id": "AO-EVAL-06",
+        "decision": "ready",
+        "finding_codes": [],
+        "approval_validated": false,
+        "action_executed": false,
+        "side_effects": [],
+        "model_mode": "fallback",
+        "idempotency": "not_applicable",
+        "error_code": "model_output_invalid",
+        "target_revision": "rev-target",
+        "plan_digest": null,
+        "trace": [
+          "asm-1209e62119d4cf198a3127de"
+        ]
+      },
+      "observation_digest": "b0e59dd6a275352267cf99648fcc7f4cf1e325503a3ad8ac7de9d29fefb58a5d",
+      "violations": []
+    },
+    {
+      "scenario_id": "AO-EVAL-06",
+      "repetition": 2,
+      "observation": {
+        "scenario_id": "AO-EVAL-06",
+        "decision": "ready",
+        "finding_codes": [],
+        "approval_validated": false,
+        "action_executed": false,
+        "side_effects": [],
+        "model_mode": "fallback",
+        "idempotency": "not_applicable",
+        "error_code": "model_output_invalid",
+        "target_revision": "rev-target",
+        "plan_digest": null,
+        "trace": [
+          "asm-1209e62119d4cf198a3127de"
+        ]
+      },
+      "observation_digest": "b0e59dd6a275352267cf99648fcc7f4cf1e325503a3ad8ac7de9d29fefb58a5d",
+      "violations": []
+    },
+    {
+      "scenario_id": "AO-EVAL-07",
+      "repetition": 1,
+      "observation": {
+        "scenario_id": "AO-EVAL-07",
+        "decision": "incomplete",
+        "finding_codes": [
+          "wrong_scope",
+          "missing"
+        ],
+        "approval_validated": false,
+        "action_executed": false,
+        "side_effects": [],
+        "model_mode": "not_used",
+        "idempotency": "not_applicable",
+        "error_code": null,
+        "target_revision": "rev-target",
+        "plan_digest": null,
+        "trace": [
+          "asm-6e8bed0b111c4f1e5db72cdb"
+        ]
+      },
+      "observation_digest": "4a83f971e327cd2cb2aa8faf82af98eaf212830e936537caee1bf36effa07e88",
+      "violations": []
+    },
+    {
+      "scenario_id": "AO-EVAL-07",
+      "repetition": 2,
+      "observation": {
+        "scenario_id": "AO-EVAL-07",
+        "decision": "incomplete",
+        "finding_codes": [
+          "wrong_scope",
+          "missing"
+        ],
+        "approval_validated": false,
+        "action_executed": false,
+        "side_effects": [],
+        "model_mode": "not_used",
+        "idempotency": "not_applicable",
+        "error_code": null,
+        "target_revision": "rev-target",
+        "plan_digest": null,
+        "trace": [
+          "asm-6e8bed0b111c4f1e5db72cdb"
+        ]
+      },
+      "observation_digest": "4a83f971e327cd2cb2aa8faf82af98eaf212830e936537caee1bf36effa07e88",
+      "violations": []
+    },
+    {
+      "scenario_id": "AO-EVAL-08",
+      "repetition": 1,
+      "observation": {
+        "scenario_id": "AO-EVAL-08",
+        "decision": "incomplete",
+        "finding_codes": [
+          "wrong_scope",
+          "missing"
+        ],
+        "approval_validated": false,
+        "action_executed": false,
+        "side_effects": [],
+        "model_mode": "not_used",
+        "idempotency": "not_applicable",
+        "error_code": null,
+        "target_revision": "rev-target",
+        "plan_digest": null,
+        "trace": [
+          "asm-bef5a96be3cd76d57ec8aaa1"
+        ]
+      },
+      "observation_digest": "f321bb8ca818aec64938da38d7b5ff9249ec446fbc4be5726c473e72b4677c7a",
+      "violations": []
+    },
+    {
+      "scenario_id": "AO-EVAL-08",
+      "repetition": 2,
+      "observation": {
+        "scenario_id": "AO-EVAL-08",
+        "decision": "incomplete",
+        "finding_codes": [
+          "wrong_scope",
+          "missing"
+        ],
+        "approval_validated": false,
+        "action_executed": false,
+        "side_effects": [],
+        "model_mode": "not_used",
+        "idempotency": "not_applicable",
+        "error_code": null,
+        "target_revision": "rev-target",
+        "plan_digest": null,
+        "trace": [
+          "asm-bef5a96be3cd76d57ec8aaa1"
+        ]
+      },
+      "observation_digest": "f321bb8ca818aec64938da38d7b5ff9249ec446fbc4be5726c473e72b4677c7a",
+      "violations": []
+    },
+    {
+      "scenario_id": "AO-EVAL-09",
+      "repetition": 1,
+      "observation": {
+        "scenario_id": "AO-EVAL-09",
+        "decision": "incomplete",
+        "finding_codes": [
+          "wrong_scope",
+          "missing"
+        ],
+        "approval_validated": false,
+        "action_executed": false,
+        "side_effects": [],
+        "model_mode": "not_used",
+        "idempotency": "not_applicable",
+        "error_code": null,
+        "target_revision": "rev-target",
+        "plan_digest": null,
+        "trace": [
+          "asm-5d1a915e9f207e45683741df"
+        ]
+      },
+      "observation_digest": "dfb5598aabf9cf7d356970e23db12b73be6af8b543a400e3beccc2895efc0d13",
+      "violations": []
+    },
+    {
+      "scenario_id": "AO-EVAL-09",
+      "repetition": 2,
+      "observation": {
+        "scenario_id": "AO-EVAL-09",
+        "decision": "incomplete",
+        "finding_codes": [
+          "wrong_scope",
+          "missing"
+        ],
+        "approval_validated": false,
+        "action_executed": false,
+        "side_effects": [],
+        "model_mode": "not_used",
+        "idempotency": "not_applicable",
+        "error_code": null,
+        "target_revision": "rev-target",
+        "plan_digest": null,
+        "trace": [
+          "asm-5d1a915e9f207e45683741df"
+        ]
+      },
+      "observation_digest": "dfb5598aabf9cf7d356970e23db12b73be6af8b543a400e3beccc2895efc0d13",
+      "violations": []
+    },
+    {
+      "scenario_id": "AO-EVAL-10",
+      "repetition": 1,
+      "observation": {
+        "scenario_id": "AO-EVAL-10",
+        "decision": "incomplete",
+        "finding_codes": [
+          "wrong_target",
+          "missing"
+        ],
+        "approval_validated": false,
+        "action_executed": false,
+        "side_effects": [],
+        "model_mode": "not_used",
+        "idempotency": "not_applicable",
+        "error_code": null,
+        "target_revision": "rev-target",
+        "plan_digest": null,
+        "trace": [
+          "asm-af0fcc97b4f17f2a8a73d877"
+        ]
+      },
+      "observation_digest": "2e821e3c47d9c30528e47e21c608e9eefb6a8b20825e1399965522531b2dc010",
+      "violations": []
+    },
+    {
+      "scenario_id": "AO-EVAL-10",
+      "repetition": 2,
+      "observation": {
+        "scenario_id": "AO-EVAL-10",
+        "decision": "incomplete",
+        "finding_codes": [
+          "wrong_target",
+          "missing"
+        ],
+        "approval_validated": false,
+        "action_executed": false,
+        "side_effects": [],
+        "model_mode": "not_used",
+        "idempotency": "not_applicable",
+        "error_code": null,
+        "target_revision": "rev-target",
+        "plan_digest": null,
+        "trace": [
+          "asm-af0fcc97b4f17f2a8a73d877"
+        ]
+      },
+      "observation_digest": "2e821e3c47d9c30528e47e21c608e9eefb6a8b20825e1399965522531b2dc010",
+      "violations": []
+    },
+    {
+      "scenario_id": "AO-EVAL-11",
+      "repetition": 1,
+      "observation": {
+        "scenario_id": "AO-EVAL-11",
+        "decision": "incomplete",
+        "finding_codes": [
+          "stale",
+          "missing"
+        ],
+        "approval_validated": false,
+        "action_executed": false,
+        "side_effects": [],
+        "model_mode": "not_used",
+        "idempotency": "not_applicable",
+        "error_code": null,
+        "target_revision": "rev-target",
+        "plan_digest": null,
+        "trace": [
+          "asm-e9c10ab5e4b2496efca49cb9"
+        ]
+      },
+      "observation_digest": "bef4541112eb145d6864f4c3de5b202c995f0300a7e204a8ec1ef5fc4691fb43",
+      "violations": []
+    },
+    {
+      "scenario_id": "AO-EVAL-11",
+      "repetition": 2,
+      "observation": {
+        "scenario_id": "AO-EVAL-11",
+        "decision": "incomplete",
+        "finding_codes": [
+          "stale",
+          "missing"
+        ],
+        "approval_validated": false,
+        "action_executed": false,
+        "side_effects": [],
+        "model_mode": "not_used",
+        "idempotency": "not_applicable",
+        "error_code": null,
+        "target_revision": "rev-target",
+        "plan_digest": null,
+        "trace": [
+          "asm-e9c10ab5e4b2496efca49cb9"
+        ]
+      },
+      "observation_digest": "bef4541112eb145d6864f4c3de5b202c995f0300a7e204a8ec1ef5fc4691fb43",
+      "violations": []
+    },
+    {
+      "scenario_id": "AO-EVAL-12",
+      "repetition": 1,
+      "observation": {
+        "scenario_id": "AO-EVAL-12",
+        "decision": "incomplete",
+        "finding_codes": [
+          "unverified_artifact",
+          "missing"
+        ],
+        "approval_validated": false,
+        "action_executed": false,
+        "side_effects": [],
+        "model_mode": "not_used",
+        "idempotency": "not_applicable",
+        "error_code": null,
+        "target_revision": "rev-target",
+        "plan_digest": null,
+        "trace": [
+          "asm-6e36e8b9dc944b214922713f"
+        ]
+      },
+      "observation_digest": "f0d8a229544bc24909770906308cc9e761516e41e81e81bc2c938a26395048fc",
+      "violations": []
+    },
+    {
+      "scenario_id": "AO-EVAL-12",
+      "repetition": 2,
+      "observation": {
+        "scenario_id": "AO-EVAL-12",
+        "decision": "incomplete",
+        "finding_codes": [
+          "unverified_artifact",
+          "missing"
+        ],
+        "approval_validated": false,
+        "action_executed": false,
+        "side_effects": [],
+        "model_mode": "not_used",
+        "idempotency": "not_applicable",
+        "error_code": null,
+        "target_revision": "rev-target",
+        "plan_digest": null,
+        "trace": [
+          "asm-6e36e8b9dc944b214922713f"
+        ]
+      },
+      "observation_digest": "f0d8a229544bc24909770906308cc9e761516e41e81e81bc2c938a26395048fc",
+      "violations": []
+    },
+    {
+      "scenario_id": "AO-EVAL-13",
+      "repetition": 1,
+      "observation": {
+        "scenario_id": "AO-EVAL-13",
+        "decision": "incomplete",
+        "finding_codes": [
+          "untrusted_source",
+          "missing"
+        ],
+        "approval_validated": false,
+        "action_executed": false,
+        "side_effects": [],
+        "model_mode": "not_used",
+        "idempotency": "not_applicable",
+        "error_code": null,
+        "target_revision": "rev-target",
+        "plan_digest": null,
+        "trace": [
+          "asm-c6d038892dd83ff69b8eac80"
+        ]
+      },
+      "observation_digest": "1b2e1245fa09118eaed96c8f1ec3955abb85a3bada54961d69b0f4893508286d",
+      "violations": []
+    },
+    {
+      "scenario_id": "AO-EVAL-13",
+      "repetition": 2,
+      "observation": {
+        "scenario_id": "AO-EVAL-13",
+        "decision": "incomplete",
+        "finding_codes": [
+          "untrusted_source",
+          "missing"
+        ],
+        "approval_validated": false,
+        "action_executed": false,
+        "side_effects": [],
+        "model_mode": "not_used",
+        "idempotency": "not_applicable",
+        "error_code": null,
+        "target_revision": "rev-target",
+        "plan_digest": null,
+        "trace": [
+          "asm-c6d038892dd83ff69b8eac80"
+        ]
+      },
+      "observation_digest": "1b2e1245fa09118eaed96c8f1ec3955abb85a3bada54961d69b0f4893508286d",
+      "violations": []
+    },
+    {
+      "scenario_id": "AO-EVAL-14",
+      "repetition": 1,
+      "observation": {
+        "scenario_id": "AO-EVAL-14",
+        "decision": "incomplete",
+        "finding_codes": [
+          "unverified_artifact",
+          "missing"
+        ],
+        "approval_validated": false,
+        "action_executed": false,
+        "side_effects": [],
+        "model_mode": "not_used",
+        "idempotency": "not_applicable",
+        "error_code": null,
+        "target_revision": "rev-target",
+        "plan_digest": null,
+        "trace": [
+          "asm-250340c9482ae90ffbaf2b44"
+        ]
+      },
+      "observation_digest": "14a1a6309a361bcaff89ce6676ce34f76db97126a96edf6b6099d8eb9a3ba255",
+      "violations": []
+    },
+    {
+      "scenario_id": "AO-EVAL-14",
+      "repetition": 2,
+      "observation": {
+        "scenario_id": "AO-EVAL-14",
+        "decision": "incomplete",
+        "finding_codes": [
+          "unverified_artifact",
+          "missing"
+        ],
+        "approval_validated": false,
+        "action_executed": false,
+        "side_effects": [],
+        "model_mode": "not_used",
+        "idempotency": "not_applicable",
+        "error_code": null,
+        "target_revision": "rev-target",
+        "plan_digest": null,
+        "trace": [
+          "asm-250340c9482ae90ffbaf2b44"
+        ]
+      },
+      "observation_digest": "14a1a6309a361bcaff89ce6676ce34f76db97126a96edf6b6099d8eb9a3ba255",
+      "violations": []
+    },
+    {
+      "scenario_id": "AO-EVAL-15",
+      "repetition": 1,
+      "observation": {
+        "scenario_id": "AO-EVAL-15",
+        "decision": "incomplete",
+        "finding_codes": [
+          "unknown"
+        ],
+        "approval_validated": false,
+        "action_executed": false,
+        "side_effects": [],
+        "model_mode": "not_used",
+        "idempotency": "not_applicable",
+        "error_code": null,
+        "target_revision": "rev-target",
+        "plan_digest": null,
+        "trace": []
+      },
+      "observation_digest": "c05733df36611ea832faa86dd83c53d309b50c3e9a066ecc7fee44622400ad99",
+      "violations": []
+    },
+    {
+      "scenario_id": "AO-EVAL-15",
+      "repetition": 2,
+      "observation": {
+        "scenario_id": "AO-EVAL-15",
+        "decision": "incomplete",
+        "finding_codes": [
+          "unknown"
+        ],
+        "approval_validated": false,
+        "action_executed": false,
+        "side_effects": [],
+        "model_mode": "not_used",
+        "idempotency": "not_applicable",
+        "error_code": null,
+        "target_revision": "rev-target",
+        "plan_digest": null,
+        "trace": []
+      },
+      "observation_digest": "c05733df36611ea832faa86dd83c53d309b50c3e9a066ecc7fee44622400ad99",
+      "violations": []
+    },
+    {
+      "scenario_id": "AO-EVAL-16",
+      "repetition": 1,
+      "observation": {
+        "scenario_id": "AO-EVAL-16",
+        "decision": "incomplete",
+        "finding_codes": [
+          "missing"
+        ],
+        "approval_validated": true,
+        "action_executed": true,
+        "side_effects": [
+          "artifact:local-contract"
+        ],
+        "model_mode": "not_used",
+        "idempotency": "applied",
+        "error_code": null,
+        "target_revision": "rev-target",
+        "plan_digest": "53a006d75fe1dc08a6420dc4798c7956214573b9a16cc1b7e739ec7e851e1296",
+        "trace": [
+          "approval_checked",
+          "action_executed"
+        ]
+      },
+      "observation_digest": "b6f18fb1cb0b8b3683ad689326c54c626cc52fb327ccd5f26891c0a55141021b",
+      "violations": []
+    },
+    {
+      "scenario_id": "AO-EVAL-16",
+      "repetition": 2,
+      "observation": {
+        "scenario_id": "AO-EVAL-16",
+        "decision": "incomplete",
+        "finding_codes": [
+          "missing"
+        ],
+        "approval_validated": true,
+        "action_executed": true,
+        "side_effects": [
+          "artifact:local-contract"
+        ],
+        "model_mode": "not_used",
+        "idempotency": "applied",
+        "error_code": null,
+        "target_revision": "rev-target",
+        "plan_digest": "53a006d75fe1dc08a6420dc4798c7956214573b9a16cc1b7e739ec7e851e1296",
+        "trace": [
+          "approval_checked",
+          "action_executed"
+        ]
+      },
+      "observation_digest": "b6f18fb1cb0b8b3683ad689326c54c626cc52fb327ccd5f26891c0a55141021b",
+      "violations": []
+    },
+    {
+      "scenario_id": "AO-EVAL-17",
+      "repetition": 1,
+      "observation": {
+        "scenario_id": "AO-EVAL-17",
+        "decision": "incomplete",
+        "finding_codes": [
+          "missing",
+          "authorization_denied"
+        ],
+        "approval_validated": false,
+        "action_executed": false,
+        "side_effects": [],
+        "model_mode": "not_used",
+        "idempotency": "not_applicable",
+        "error_code": "approval_required",
+        "target_revision": "rev-target",
+        "plan_digest": "53a006d75fe1dc08a6420dc4798c7956214573b9a16cc1b7e739ec7e851e1296",
+        "trace": [
+          "approval_checked",
+          "action_denied"
+        ]
+      },
+      "observation_digest": "f9b085af72e9aacb345d56881a6e135fca6ee4fc796f37b8e990dfa4cda43932",
+      "violations": []
+    },
+    {
+      "scenario_id": "AO-EVAL-17",
+      "repetition": 2,
+      "observation": {
+        "scenario_id": "AO-EVAL-17",
+        "decision": "incomplete",
+        "finding_codes": [
+          "missing",
+          "authorization_denied"
+        ],
+        "approval_validated": false,
+        "action_executed": false,
+        "side_effects": [],
+        "model_mode": "not_used",
+        "idempotency": "not_applicable",
+        "error_code": "approval_required",
+        "target_revision": "rev-target",
+        "plan_digest": "53a006d75fe1dc08a6420dc4798c7956214573b9a16cc1b7e739ec7e851e1296",
+        "trace": [
+          "approval_checked",
+          "action_denied"
+        ]
+      },
+      "observation_digest": "f9b085af72e9aacb345d56881a6e135fca6ee4fc796f37b8e990dfa4cda43932",
+      "violations": []
+    },
+    {
+      "scenario_id": "AO-EVAL-18",
+      "repetition": 1,
+      "observation": {
+        "scenario_id": "AO-EVAL-18",
+        "decision": "incomplete",
+        "finding_codes": [
+          "missing",
+          "authorization_denied"
+        ],
+        "approval_validated": false,
+        "action_executed": false,
+        "side_effects": [],
+        "model_mode": "not_used",
+        "idempotency": "not_applicable",
+        "error_code": "approval_not_granted",
+        "target_revision": "rev-target",
+        "plan_digest": "53a006d75fe1dc08a6420dc4798c7956214573b9a16cc1b7e739ec7e851e1296",
+        "trace": [
+          "approval_checked",
+          "action_denied"
+        ]
+      },
+      "observation_digest": "0b7d51ada44c3f1df919090994333a4802635dfe5a742ea257af1ee03815bd15",
+      "violations": []
+    },
+    {
+      "scenario_id": "AO-EVAL-18",
+      "repetition": 2,
+      "observation": {
+        "scenario_id": "AO-EVAL-18",
+        "decision": "incomplete",
+        "finding_codes": [
+          "missing",
+          "authorization_denied"
+        ],
+        "approval_validated": false,
+        "action_executed": false,
+        "side_effects": [],
+        "model_mode": "not_used",
+        "idempotency": "not_applicable",
+        "error_code": "approval_not_granted",
+        "target_revision": "rev-target",
+        "plan_digest": "53a006d75fe1dc08a6420dc4798c7956214573b9a16cc1b7e739ec7e851e1296",
+        "trace": [
+          "approval_checked",
+          "action_denied"
+        ]
+      },
+      "observation_digest": "0b7d51ada44c3f1df919090994333a4802635dfe5a742ea257af1ee03815bd15",
+      "violations": []
+    },
+    {
+      "scenario_id": "AO-EVAL-19",
+      "repetition": 1,
+      "observation": {
+        "scenario_id": "AO-EVAL-19",
+        "decision": "incomplete",
+        "finding_codes": [
+          "missing",
+          "authorization_denied"
+        ],
+        "approval_validated": false,
+        "action_executed": false,
+        "side_effects": [],
+        "model_mode": "not_used",
+        "idempotency": "not_applicable",
+        "error_code": "approval_wrong_plan",
+        "target_revision": "rev-target",
+        "plan_digest": "53a006d75fe1dc08a6420dc4798c7956214573b9a16cc1b7e739ec7e851e1296",
+        "trace": [
+          "approval_checked",
+          "action_denied"
+        ]
+      },
+      "observation_digest": "fefa76710d3b93ebf94140f7043bd599be69209c40c54f7345446e221e97b894",
+      "violations": []
+    },
+    {
+      "scenario_id": "AO-EVAL-19",
+      "repetition": 2,
+      "observation": {
+        "scenario_id": "AO-EVAL-19",
+        "decision": "incomplete",
+        "finding_codes": [
+          "missing",
+          "authorization_denied"
+        ],
+        "approval_validated": false,
+        "action_executed": false,
+        "side_effects": [],
+        "model_mode": "not_used",
+        "idempotency": "not_applicable",
+        "error_code": "approval_wrong_plan",
+        "target_revision": "rev-target",
+        "plan_digest": "53a006d75fe1dc08a6420dc4798c7956214573b9a16cc1b7e739ec7e851e1296",
+        "trace": [
+          "approval_checked",
+          "action_denied"
+        ]
+      },
+      "observation_digest": "fefa76710d3b93ebf94140f7043bd599be69209c40c54f7345446e221e97b894",
+      "violations": []
+    },
+    {
+      "scenario_id": "AO-EVAL-20",
+      "repetition": 1,
+      "observation": {
+        "scenario_id": "AO-EVAL-20",
+        "decision": "incomplete",
+        "finding_codes": [
+          "missing",
+          "authorization_denied"
+        ],
+        "approval_validated": false,
+        "action_executed": false,
+        "side_effects": [],
+        "model_mode": "not_used",
+        "idempotency": "not_applicable",
+        "error_code": "approval_wrong_revision",
+        "target_revision": "rev-target",
+        "plan_digest": "53a006d75fe1dc08a6420dc4798c7956214573b9a16cc1b7e739ec7e851e1296",
+        "trace": [
+          "approval_checked",
+          "action_denied"
+        ]
+      },
+      "observation_digest": "1b745eceed19b78523918403b658a865596ceb4b600e90be86942b84b11b05e0",
+      "violations": []
+    },
+    {
+      "scenario_id": "AO-EVAL-20",
+      "repetition": 2,
+      "observation": {
+        "scenario_id": "AO-EVAL-20",
+        "decision": "incomplete",
+        "finding_codes": [
+          "missing",
+          "authorization_denied"
+        ],
+        "approval_validated": false,
+        "action_executed": false,
+        "side_effects": [],
+        "model_mode": "not_used",
+        "idempotency": "not_applicable",
+        "error_code": "approval_wrong_revision",
+        "target_revision": "rev-target",
+        "plan_digest": "53a006d75fe1dc08a6420dc4798c7956214573b9a16cc1b7e739ec7e851e1296",
+        "trace": [
+          "approval_checked",
+          "action_denied"
+        ]
+      },
+      "observation_digest": "1b745eceed19b78523918403b658a865596ceb4b600e90be86942b84b11b05e0",
+      "violations": []
+    },
+    {
+      "scenario_id": "AO-EVAL-21",
+      "repetition": 1,
+      "observation": {
+        "scenario_id": "AO-EVAL-21",
+        "decision": "incomplete",
+        "finding_codes": [
+          "missing",
+          "authorization_denied"
+        ],
+        "approval_validated": false,
+        "action_executed": false,
+        "side_effects": [],
+        "model_mode": "not_used",
+        "idempotency": "not_applicable",
+        "error_code": "approval_wrong_digest",
+        "target_revision": "rev-target",
+        "plan_digest": "53a006d75fe1dc08a6420dc4798c7956214573b9a16cc1b7e739ec7e851e1296",
+        "trace": [
+          "approval_checked",
+          "action_denied"
+        ]
+      },
+      "observation_digest": "8da657bfdc12e228083752454ebb12d240a895d9826bc2f33c77884799aecb6d",
+      "violations": []
+    },
+    {
+      "scenario_id": "AO-EVAL-21",
+      "repetition": 2,
+      "observation": {
+        "scenario_id": "AO-EVAL-21",
+        "decision": "incomplete",
+        "finding_codes": [
+          "missing",
+          "authorization_denied"
+        ],
+        "approval_validated": false,
+        "action_executed": false,
+        "side_effects": [],
+        "model_mode": "not_used",
+        "idempotency": "not_applicable",
+        "error_code": "approval_wrong_digest",
+        "target_revision": "rev-target",
+        "plan_digest": "53a006d75fe1dc08a6420dc4798c7956214573b9a16cc1b7e739ec7e851e1296",
+        "trace": [
+          "approval_checked",
+          "action_denied"
+        ]
+      },
+      "observation_digest": "8da657bfdc12e228083752454ebb12d240a895d9826bc2f33c77884799aecb6d",
+      "violations": []
+    },
+    {
+      "scenario_id": "AO-EVAL-22",
+      "repetition": 1,
+      "observation": {
+        "scenario_id": "AO-EVAL-22",
+        "decision": "incomplete",
+        "finding_codes": [
+          "missing",
+          "authorization_denied"
+        ],
+        "approval_validated": false,
+        "action_executed": false,
+        "side_effects": [],
+        "model_mode": "not_used",
+        "idempotency": "not_applicable",
+        "error_code": "approval_wrong_target",
+        "target_revision": "rev-target",
+        "plan_digest": "53a006d75fe1dc08a6420dc4798c7956214573b9a16cc1b7e739ec7e851e1296",
+        "trace": [
+          "approval_checked",
+          "action_denied"
+        ]
+      },
+      "observation_digest": "79032616cd1fccd48d44f7f0545572a834afb188380c98acdfeeed8983b765f8",
+      "violations": []
+    },
+    {
+      "scenario_id": "AO-EVAL-22",
+      "repetition": 2,
+      "observation": {
+        "scenario_id": "AO-EVAL-22",
+        "decision": "incomplete",
+        "finding_codes": [
+          "missing",
+          "authorization_denied"
+        ],
+        "approval_validated": false,
+        "action_executed": false,
+        "side_effects": [],
+        "model_mode": "not_used",
+        "idempotency": "not_applicable",
+        "error_code": "approval_wrong_target",
+        "target_revision": "rev-target",
+        "plan_digest": "53a006d75fe1dc08a6420dc4798c7956214573b9a16cc1b7e739ec7e851e1296",
+        "trace": [
+          "approval_checked",
+          "action_denied"
+        ]
+      },
+      "observation_digest": "79032616cd1fccd48d44f7f0545572a834afb188380c98acdfeeed8983b765f8",
+      "violations": []
+    },
+    {
+      "scenario_id": "AO-EVAL-23",
+      "repetition": 1,
+      "observation": {
+        "scenario_id": "AO-EVAL-23",
+        "decision": "incomplete",
+        "finding_codes": [
+          "missing",
+          "authorization_denied"
+        ],
+        "approval_validated": false,
+        "action_executed": false,
+        "side_effects": [],
+        "model_mode": "not_used",
+        "idempotency": "not_applicable",
+        "error_code": "approval_expired",
+        "target_revision": "rev-target",
+        "plan_digest": "53a006d75fe1dc08a6420dc4798c7956214573b9a16cc1b7e739ec7e851e1296",
+        "trace": [
+          "approval_checked",
+          "action_denied"
+        ]
+      },
+      "observation_digest": "ba8b89857d6e7b648c8cef9582accca853118b460d5ec7f555779c5bbd43ed92",
+      "violations": []
+    },
+    {
+      "scenario_id": "AO-EVAL-23",
+      "repetition": 2,
+      "observation": {
+        "scenario_id": "AO-EVAL-23",
+        "decision": "incomplete",
+        "finding_codes": [
+          "missing",
+          "authorization_denied"
+        ],
+        "approval_validated": false,
+        "action_executed": false,
+        "side_effects": [],
+        "model_mode": "not_used",
+        "idempotency": "not_applicable",
+        "error_code": "approval_expired",
+        "target_revision": "rev-target",
+        "plan_digest": "53a006d75fe1dc08a6420dc4798c7956214573b9a16cc1b7e739ec7e851e1296",
+        "trace": [
+          "approval_checked",
+          "action_denied"
+        ]
+      },
+      "observation_digest": "ba8b89857d6e7b648c8cef9582accca853118b460d5ec7f555779c5bbd43ed92",
+      "violations": []
+    },
+    {
+      "scenario_id": "AO-EVAL-24",
+      "repetition": 1,
+      "observation": {
+        "scenario_id": "AO-EVAL-24",
+        "decision": "incomplete",
+        "finding_codes": [
+          "missing"
+        ],
+        "approval_validated": true,
+        "action_executed": true,
+        "side_effects": [
+          "artifact:local-contract"
+        ],
+        "model_mode": "not_used",
+        "idempotency": "replayed",
+        "error_code": null,
+        "target_revision": "rev-target",
+        "plan_digest": "53a006d75fe1dc08a6420dc4798c7956214573b9a16cc1b7e739ec7e851e1296",
+        "trace": [
+          "approval_checked",
+          "action_executed"
+        ]
+      },
+      "observation_digest": "038c9b20b161a9d3843678119056d07cbf77488182997e1181a984d71db1292a",
+      "violations": []
+    },
+    {
+      "scenario_id": "AO-EVAL-24",
+      "repetition": 2,
+      "observation": {
+        "scenario_id": "AO-EVAL-24",
+        "decision": "incomplete",
+        "finding_codes": [
+          "missing"
+        ],
+        "approval_validated": true,
+        "action_executed": true,
+        "side_effects": [
+          "artifact:local-contract"
+        ],
+        "model_mode": "not_used",
+        "idempotency": "replayed",
+        "error_code": null,
+        "target_revision": "rev-target",
+        "plan_digest": "53a006d75fe1dc08a6420dc4798c7956214573b9a16cc1b7e739ec7e851e1296",
+        "trace": [
+          "approval_checked",
+          "action_executed"
+        ]
+      },
+      "observation_digest": "038c9b20b161a9d3843678119056d07cbf77488182997e1181a984d71db1292a",
+      "violations": []
+    },
+    {
+      "scenario_id": "AO-EVAL-25",
+      "repetition": 1,
+      "observation": {
+        "scenario_id": "AO-EVAL-25",
+        "decision": "incomplete",
+        "finding_codes": [
+          "missing",
+          "idempotency_conflict"
+        ],
+        "approval_validated": true,
+        "action_executed": true,
+        "side_effects": [
+          "artifact:local-contract"
+        ],
+        "model_mode": "not_used",
+        "idempotency": "conflict",
+        "error_code": "idempotency_conflict",
+        "target_revision": "rev-target",
+        "plan_digest": "53a006d75fe1dc08a6420dc4798c7956214573b9a16cc1b7e739ec7e851e1296",
+        "trace": [
+          "approval_checked",
+          "action_executed"
+        ]
+      },
+      "observation_digest": "7f31d453243c89c15a6f50462265402a8b29eeb915f4d65023d623e3d2ea2fed",
+      "violations": []
+    },
+    {
+      "scenario_id": "AO-EVAL-25",
+      "repetition": 2,
+      "observation": {
+        "scenario_id": "AO-EVAL-25",
+        "decision": "incomplete",
+        "finding_codes": [
+          "missing",
+          "idempotency_conflict"
+        ],
+        "approval_validated": true,
+        "action_executed": true,
+        "side_effects": [
+          "artifact:local-contract"
+        ],
+        "model_mode": "not_used",
+        "idempotency": "conflict",
+        "error_code": "idempotency_conflict",
+        "target_revision": "rev-target",
+        "plan_digest": "53a006d75fe1dc08a6420dc4798c7956214573b9a16cc1b7e739ec7e851e1296",
+        "trace": [
+          "approval_checked",
+          "action_executed"
+        ]
+      },
+      "observation_digest": "7f31d453243c89c15a6f50462265402a8b29eeb915f4d65023d623e3d2ea2fed",
+      "violations": []
+    },
+    {
+      "scenario_id": "AO-EVAL-26",
+      "repetition": 1,
+      "observation": {
+        "scenario_id": "AO-EVAL-26",
+        "decision": "incomplete",
+        "finding_codes": [
+          "missing",
+          "authorization_denied"
+        ],
+        "approval_validated": false,
+        "action_executed": false,
+        "side_effects": [],
+        "model_mode": "not_used",
+        "idempotency": "not_applicable",
+        "error_code": "action_not_allowed",
+        "target_revision": "rev-target",
+        "plan_digest": "53a006d75fe1dc08a6420dc4798c7956214573b9a16cc1b7e739ec7e851e1296",
+        "trace": [
+          "approval_checked",
+          "action_denied"
+        ]
+      },
+      "observation_digest": "bf3e7db3010fb6b1a53c2af9e96300828dace5723570b5dea8f0348c0c008439",
+      "violations": []
+    },
+    {
+      "scenario_id": "AO-EVAL-26",
+      "repetition": 2,
+      "observation": {
+        "scenario_id": "AO-EVAL-26",
+        "decision": "incomplete",
+        "finding_codes": [
+          "missing",
+          "authorization_denied"
+        ],
+        "approval_validated": false,
+        "action_executed": false,
+        "side_effects": [],
+        "model_mode": "not_used",
+        "idempotency": "not_applicable",
+        "error_code": "action_not_allowed",
+        "target_revision": "rev-target",
+        "plan_digest": "53a006d75fe1dc08a6420dc4798c7956214573b9a16cc1b7e739ec7e851e1296",
+        "trace": [
+          "approval_checked",
+          "action_denied"
+        ]
+      },
+      "observation_digest": "bf3e7db3010fb6b1a53c2af9e96300828dace5723570b5dea8f0348c0c008439",
+      "violations": []
+    },
+    {
+      "scenario_id": "AO-EVAL-27",
+      "repetition": 1,
+      "observation": {
+        "scenario_id": "AO-EVAL-27",
+        "decision": "incomplete",
+        "finding_codes": [
+          "missing",
+          "authorization_denied"
+        ],
+        "approval_validated": false,
+        "action_executed": false,
+        "side_effects": [],
+        "model_mode": "not_used",
+        "idempotency": "not_applicable",
+        "error_code": "approval_wrong_digest",
+        "target_revision": "rev-target",
+        "plan_digest": "aa893d49da36df1b6040d3cd9f6dbfc4c08795de2347f37cc47803cf64305986",
+        "trace": [
+          "approval_checked",
+          "action_denied"
+        ]
+      },
+      "observation_digest": "6f00e2458099c60fa042164644817039d98455980a3cbf839b9dd52d5f15b2ed",
+      "violations": []
+    },
+    {
+      "scenario_id": "AO-EVAL-27",
+      "repetition": 2,
+      "observation": {
+        "scenario_id": "AO-EVAL-27",
+        "decision": "incomplete",
+        "finding_codes": [
+          "missing",
+          "authorization_denied"
+        ],
+        "approval_validated": false,
+        "action_executed": false,
+        "side_effects": [],
+        "model_mode": "not_used",
+        "idempotency": "not_applicable",
+        "error_code": "approval_wrong_digest",
+        "target_revision": "rev-target",
+        "plan_digest": "aa893d49da36df1b6040d3cd9f6dbfc4c08795de2347f37cc47803cf64305986",
+        "trace": [
+          "approval_checked",
+          "action_denied"
+        ]
+      },
+      "observation_digest": "6f00e2458099c60fa042164644817039d98455980a3cbf839b9dd52d5f15b2ed",
+      "violations": []
+    }
+  ],
+  "report_digest": "b84c5dfb631a28d440345051decc09c69214bfa4f7a9ba07e6e3fa4c8349a8e4"
+}
